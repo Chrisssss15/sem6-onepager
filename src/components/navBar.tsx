@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { Menu, X } from "lucide-react"; // Importeer icoontjes voor mobiel
 import logo from "../assets/logo.svg";
 
 export const Navigation = () => {
   const [activeSprintIndex, setActiveSprintIndex] = useState<number | null>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State voor mobiel menu
 
   const sprints = [
     { id: 0, label: "Sprint 0" },
@@ -13,10 +15,14 @@ export const Navigation = () => {
     { id: 5, label: "Sprint 5" },
   ];
 
+  const handleLinkClick = (index: number) => {
+    setActiveSprintIndex(index);
+    setIsMenuOpen(false); // Sluit menu na klik op mobiel
+  };
+
   return (
+    
     <nav
-      // sticky top-0 zorgt dat hij blijft plakken
-      // z-50 zorgt dat hij boven de 'sticky' secties (z-10 t/m z-40) uit de App.tsx blijft
       className="w-full sticky top-0 z-50 shadow-sm"
       style={{ background: "var(--Color-Cream, #FFF)" }}
       role="navigation"
@@ -24,24 +30,41 @@ export const Navigation = () => {
     >
       <div className="w-full flex items-center justify-between px-6 py-6 lg:px-16">        
         {/* Logo */}
-        <a href="/" aria-label="Home">
+        <a href="/" aria-label="Home" className="z-50">
           <img
-            className="w-40 h-auto"
+            className="w-32 md:w-40 h-auto" // Iets kleiner op heel smalle schermen
             alt="Appa logo"
             src={logo}
           />
         </a>
 
-        {/* Menu */}
-        <ul className="flex gap-10">
+        {/* Mobiele Hamburger Knop */}
+        <button 
+          className="lg:hidden z-50 text-black p-2"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+
+        {/* Menu (Desktop & Mobiel) */}
+        <ul className={`
+          /* Desktop styling (ongewijzigd) */
+          lg:flex lg:gap-10 lg:static lg:flex-row lg:bg-transparent lg:p-0 lg:shadow-none lg:w-auto lg:h-auto
+          
+          /* Mobiele styling (verborgen tenzij open) */
+          ${isMenuOpen ? 'flex' : 'hidden'}
+          flex-col gap-6 absolute top-0 left-0 w-full h-screen bg-white items-center justify-center text-xl
+          transition-all duration-300 ease-in-out
+        `}>
           {sprints.map((sprint, index) => (
-            <li key={sprint.id}>
+            <li key={sprint.id} className="w-full text-center lg:w-auto">
               <a
                 href={`#sprint-${sprint.id}`}
-                className={`text-black hover:opacity-70 transition-opacity ${
+                className={`text-black hover:opacity-70 transition-opacity block py-2 ${
                   activeSprintIndex === index ? "font-bold" : ""
                 }`}
-                onClick={() => setActiveSprintIndex(index)}
+                onClick={() => handleLinkClick(index)}
               >
                 {sprint.label}
               </a>
