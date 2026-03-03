@@ -15,12 +15,14 @@ export const Navigation = () => {
 
   return (
     <nav
-      className="w-full"
+      // sticky top-0 zorgt dat hij blijft plakken
+      // z-50 zorgt dat hij boven de 'sticky' secties (z-10 t/m z-40) uit de App.tsx blijft
+      className="w-full sticky top-0 z-50 shadow-sm"
       style={{ background: "var(--Color-Cream, #FFF)" }}
       role="navigation"
       aria-label="Main navigation"
     >
-<div className="w-full flex items-center justify-between px-6 py-6">        
+      <div className="w-full flex items-center justify-between px-6 py-6 lg:px-16">        
         {/* Logo */}
         <a href="/" aria-label="Home">
           <img
@@ -35,7 +37,7 @@ export const Navigation = () => {
           {sprints.map((sprint, index) => (
             <li key={sprint.id}>
               <a
-                href={`#sprint-${sprint.id}`} // Verwijst naar id="sprint-0", etc.
+                href={`#sprint-${sprint.id}`}
                 className={`text-black hover:opacity-70 transition-opacity ${
                   activeSprintIndex === index ? "font-bold" : ""
                 }`}
@@ -46,7 +48,6 @@ export const Navigation = () => {
             </li>
           ))}
         </ul>
-
       </div>
     </nav>
   );
