@@ -6,8 +6,10 @@ import HeroSection from "./components/heroSection";
 function App() {
   return (
     <>
-      <Navigation />
-      <HeroSection />
+      <div className="font-sans">
+        <Navigation />
+        <HeroSection />
+      </div>
     </>
   );
 }
