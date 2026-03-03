@@ -7,6 +7,7 @@ interface SprintItem {
   content: string;
 }
 
+// Hier zijn je sprintItems weer terug!
 const sprintItems: SprintItem[] = [
   { 
     title: "De huidige context", 
@@ -25,16 +26,19 @@ const sprintItems: SprintItem[] = [
     content: "Onze ontwerpvraag luidt:\n\n“Hoe kunnen we jongeren helpen bewuster om te gaan met hun online gedrag, zodat zij een gezondere balans ervaren tussen online en offline activiteiten?”\n\nMet deze vraag richten we ons niet op het verminderen van schermtijd, maar op het vergroten van bewustzijn en regie. We onderzoeken hoe we jongeren kunnen ondersteunen in het herkennen van hun eigen gedrag, het maken van bewuste keuzes en het ontwikkelen van een digitale leefstijl die past bij hun welzijn en dagelijks leven." 
   }
 ];
-
 const SprintZeroSection = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  // Verander de initial state van null naar 0
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   const toggleItem = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
-    <section id="sprint-0" className="py-20 bg-[#292122]">
+    <section 
+      id="sprint-0" 
+      className="min-h-screen bg-[#292122] flex items-center py-20"
+    >
       <div className="container mx-auto px-6 lg:px-16 max-w-2xl">
         <h2 className="text-5xl md:text-6xl font-serif italic text-center text-white mb-14">
           Sprint 0
@@ -60,14 +64,12 @@ const SprintZeroSection = () => {
                       isOpen ? "rotate-180" : ""
                     }`}
                   />
-                  
-                  {/* De zwevende lijn met ruimte links en rechts */}
                   {isOpen && (
                     <span className="absolute bottom-0 left-6 right-6 h-[1px] bg-black/20" />
                   )}
                 </button>
 
-                <AnimatePresence>
+                <AnimatePresence initial={false}> {/* initial={false} voorkomt animatie bij de allereerste render */}
                   {isOpen && (
                     <motion.div
                       initial={{ height: 0, opacity: 0 }}
