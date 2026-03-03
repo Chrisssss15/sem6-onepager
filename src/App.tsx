@@ -2,7 +2,9 @@ import './App.css'
 import { Navigation } from "./components/navBar";
 import HeroSection from "./components/heroSection";
 import AboutUsSection from "./components/aboutUs";
-import TeamValues from "./components/teamValues";
+import TeamValuesSection from "./components/teamValues";
+import Sprint0Section from "./components/sprint-0";
+
 
 
 
@@ -13,7 +15,8 @@ function App() {
         <Navigation />
         <HeroSection />
         <AboutUsSection />
-        <TeamValues />
+        <TeamValuesSection />
+        <Sprint0Section />
       </div>
     </>
   );
