@@ -2,6 +2,7 @@ import './App.css'
 import { Navigation } from "./components/navBar";
 import HeroSection from "./components/heroSection";
 import AboutUsSection from "./components/aboutUs";
+import TeamValues from "./components/teamValues";
 
 
 
@@ -12,6 +13,7 @@ function App() {
         <Navigation />
         <HeroSection />
         <AboutUsSection />
+        <TeamValues />
       </div>
     </>
   );
