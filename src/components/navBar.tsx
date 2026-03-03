@@ -34,16 +34,15 @@ export const Navigation = () => {
         <ul className="flex gap-10">
           {sprints.map((sprint, index) => (
             <li key={sprint.id}>
-              <button
+              <a
+                href={`#sprint-${sprint.id}`} // Verwijst naar id="sprint-0", etc.
                 className={`text-black hover:opacity-70 transition-opacity ${
                   activeSprintIndex === index ? "font-bold" : ""
                 }`}
                 onClick={() => setActiveSprintIndex(index)}
-                aria-current={activeSprintIndex === index ? "page" : undefined}
-                type="button"
               >
                 {sprint.label}
-              </button>
+              </a>
             </li>
           ))}
         </ul>
