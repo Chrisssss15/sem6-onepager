@@ -17,3 +17,13 @@ body {
 .animate-spin-slow {
   animation: spin-slow 20s linear infinite;
 }
+
+/* Zorgt dat elke sectie stopt onder de navbar */
+section {
+  scroll-margin-top: 90px; /* Pas dit aan op de werkelijke hoogte van je navbar */
+}
+
+/* Vergeet ook het vloeiende scrollen niet */
+html {
+  scroll-behavior: smooth;
+}
