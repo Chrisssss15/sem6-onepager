@@ -7,42 +7,46 @@ const HeroSection = () => {
     "Wij zijn een multidisciplinair team dat onderzoekt hoe jongeren bewuster online kunnen zijn en een gezondere online-offline balans kunnen vinden.";
   const text2 = "Sprint 0 is live, ontdek onze eerste inzichten! 🚀";
 
-  // STATES VOOR DE TEKST EN ANIMATIES
   const [displayedText1, setDisplayedText1] = useState("");
   const [displayedText2, setDisplayedText2] = useState("");
   const [showFirstChat, setShowFirstChat] = useState(false); // CONTROLEERT OMHOOG SCHUIVEN BOX 1
   const [showSecondChat, setShowSecondChat] = useState(false); // CONTROLEERT OMHOOG SCHUIVEN BOX 2
 
   useEffect(() => {
-    // TYPE ANIMATIE
+    // ANIMATIE VAN TYPEN
     const typeText = (
       fullText: string, // De volledige zin die getypt moet worden
       setter: (t: string) => void, // De plek waar de letters getoond moeten worden (state)
       onComplete?: () => void,
     ) => {
-      let i = 0; // We beginnen bij de eerste letter (index 0)
+      let i = 0; // START BIJ DE ALLEREERSTE LETTER
       const interval = setInterval(() => {
-        setter(fullText.slice(0, i + 1)); // PAKT STEEDS 1 LETTER EXTRA
-        i++; // pak steeds een letter bij
+        // WORDT GEKEKEN HOEVEEL LETTERS ER ZIJN EN WORDT TOT HET LAATSTE WEERGEGEVEN
+        setter(fullText.slice(0, i + 1)); // VANAF LETTER 1
+        i++; // HIERMEE WORDT LETTER VOOR LETTER GETOOND
         if (i >= fullText.length) {
-          clearInterval(interval); // stop als de zin klaar is
-          onComplete?.(); // voer de volgende stap als die er is
+          clearInterval(interval); // STOP ALS DE ZIN KLAAR IS
+          onComplete?.(); // VOER DE VOLGENDE STAP UIT ALS DIE ER IS
         }
-      }, 25); // SNELHEID VAN HET TYPEN
+      }, 25); //snelheid van typen
     };
 
-    setShowFirstChat(true); // LAAT BOX 1 OMHOOG KOMEN
+    setShowFirstChat(true); // LAAT DE EERSTE BOX VERSCHIJNEN
 
     const timeout = setTimeout(() => {
-      // WACHT 1 SECONDE VOORDAT HET TYPEN START
+      //  TYP EERST HET LANGE BERICHT (DIT STAAT NU NOG BENEDEN)
       typeText(text1, setDisplayedText1, () => {
-        // DIT GEBEURT PAS ALS TEKST 1 KLAAR IS
+        // ALS HET KLAAR IS: DIE WACHT X EN LAAT DAN CHAT 2 KOMEN
         setTimeout(() => {
-          setShowSecondChat(true); // LAAT BOX 2 OMHOOG KOMEN
-          typeText(text2, setDisplayedText2); // START TYPEN TEKST 2
-        }, 500); // PAUZE TUSSEN DE TWEE CHATS
+          setShowSecondChat(true); // DIT ZORGT DAT CHAT 1 OMHOOG SCHUIFT
+
+          //  WACHT TOT DE SCHUIF-ANIMATIE KLAAR IS EN BEGIN DAN PAS TYPEN
+          setTimeout(() => {
+            typeText(text2, setDisplayedText2);
+          }, 700);
+        }, 800);
       });
-    }, 1000); // BEGIN-VERTRAGING
+    }, 1000);
 
     return () => clearTimeout(timeout); // VEILIGHEID: STOP ALLES BIJ AFSLUITEN
   }, []);
@@ -80,12 +84,16 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen bg-[#FFFDEB] flex items-center overflow-hidden">
       <div className="container mx-auto px-6 lg:px-16 flex flex-col lg:flex-row items-center justify-between gap-12">
-        {/* Linkerkant */}
-        <div className="flex flex-col gap-6 w-full max-w-xl relative z-10 px-4 md:px-0">
-          {/* EERSTE CHATBOX */}
+        {/* LINKERKANT */}
+        <div className="flex flex-col w-full max-w-xl relative z-10 px-4 md:px-0">
+          {/* CONTAINER VOOR CHAT 1: We gebruiken transform om hem naar beneden te duwen als chat 2 er nog niet is */}
           <div
-            className={`flex items-end gap-3 w-full transition-all duration-700 ease-out transform 
-              ${showFirstChat ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+            className="flex items-end gap-3 w-full transition-all duration-1000 ease-in-out"
+            style={{
+              // ALS CHAT 2 ER NIET IS, SCHUIF CHAT 1 DAN 150PX NAAR BENEDEN (exact op de plek van chat 2)
+              transform: showSecondChat ? "translateY(0)" : "translateY(150px)",
+              opacity: showFirstChat ? 1 : 0,
+            }}
           >
             <img
               src={miniLogo}
@@ -116,10 +124,10 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* TWEEDE CHATBOX */}
+          {/* CHATBOX 2: KOMT HIERONDER TE STAAN */}
           <div
-            className={`flex items-end gap-3 w-full transition-all duration-700 ease-out transform 
-              ${showSecondChat ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+            className={`flex items-end gap-3 w-full mt-6 transition-opacity duration-700 
+              ${showSecondChat ? "opacity-100" : "opacity-0 pointer-events-none"}`}
           >
             <img
               src={miniLogo}
