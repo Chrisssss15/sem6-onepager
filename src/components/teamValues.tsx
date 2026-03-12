@@ -31,7 +31,7 @@ const values = [
 
 const TeamValuesSection = () => {
   return (
-    <section className="py-20 bg-[#FFFDEB]">
+    <section className="min-h-screen flex items-center py-20 bg-[#FFFDEB]">
       <div className="container mx-auto px-6 lg:px-16">
         {/* DE TITEL */}
         <h2 className="text-5xl md:text-6xl font-serif italic text-center text-foreground mb-14">
