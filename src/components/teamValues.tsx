@@ -7,7 +7,8 @@ const values = [
   {
     emoji: "🤝",
     title: "Behulpzaamheid",
-    description: "Wij ondersteunen elkaar en delen kennis om samen sterker te worden.",
+    description:
+      "Wij ondersteunen elkaar en delen kennis om samen sterker te worden.",
   },
   {
     emoji: "💬",
@@ -22,7 +23,8 @@ const values = [
   {
     emoji: "🔑",
     title: "Vertrouwen",
-    description: "Wij bouwen een samenwerking waarin we op elkaar kunnen rekenen.",
+    description:
+      "Wij bouwen een samenwerking waarin we op elkaar kunnen rekenen.",
   },
 ];
 

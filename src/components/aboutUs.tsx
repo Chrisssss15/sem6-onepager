@@ -18,7 +18,7 @@ import shayenImgPopup from "../assets/shayen-popup.png";
 const teamMembers = [
   {
     name: "Shayen Manbodh",
-    image: shayenImg,          // Voeg de afbeelding toe aan het object
+    image: shayenImg, // Voeg de afbeelding toe aan het object
     popupImage: shayenImgPopup, // Voeg de popup afbeelding toe
     bio: "Hoi, ik ben Shayen en ik studeer ADS&AI. Binnen het team houd ik me vooral bezig met data in alle vormen en mate. Buiten school om sport ik veel en hou ik ervan om mijn favoriete team FC Barcelona te supporten.",
     linkedin: "https://www.linkedin.com/in/shayen-manbodh-364733291/",
@@ -28,7 +28,8 @@ const teamMembers = [
     image: alyssaImg,
     popupImage: alyssaImgPopup,
     bio: "Hey! Ik ben Alyssa, student CMD. Ik duik graag in de wereld van de gebruiker en geloof dat elk ontwerp menselijk en betekenisvol moet zijn. Daarom ben ik altijd nieuwsgierig naar het ‘waarom’ achter gedrag. Buiten mijn studie ben ik veel bezig met persoonlijke ontwikkeling, muziek en sporten.",
-    linkedin: "https://www.linkedin.com/in/alyssa-muyden?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    linkedin:
+      "https://www.linkedin.com/in/alyssa-muyden?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
   },
   {
     name: "Chris Tang",
@@ -58,7 +59,8 @@ const teamMembers = [
     image: fouziaImg,
     popupImage: fouziaImgPopup,
     bio: "Hi! Ik ben Fouzia, CMD-student en de UX designer binnen ons team. Ik vertaal inzichten uit onderzoek naar doordachte en gebruiksvriendelijke oplossingen die écht aansluiten bij de gebruiker. In mijn vrije tijd maak ik graag handgemaakte kaarten, die creativiteit en dat oog voor detail neem ik in elk ontwerp met me mee.",
-    linkedin: "https://www.linkedin.com/in/fouzia-t-122188231?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    linkedin:
+      "https://www.linkedin.com/in/fouzia-t-122188231?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
   },
 ];
 
@@ -91,10 +93,10 @@ const AboutSection = () => {
             >
               <BlobFrame>
                 {/* Gebruik hier member.image i.p.v. teamPhoto */}
-                <img 
-                  src={member.image} 
-                  alt={member.name} 
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </BlobFrame>
               <p className="text-foreground text-lg md:text-xl font-light tracking-wide">
@@ -148,7 +150,11 @@ const AboutSection = () => {
                   rel="noopener noreferrer"
                   className="border border-foreground rounded-md p-2 hover:bg-foreground hover:text-background transition-colors"
                 >
-                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <svg
+                    className="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                   </svg>
                 </a>

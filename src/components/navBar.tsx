@@ -3,7 +3,9 @@ import { Menu, X } from "lucide-react"; // Importeer icoontjes voor mobiel
 import logo from "../assets/logo.svg";
 
 export const Navigation = () => {
-  const [activeSprintIndex, setActiveSprintIndex] = useState<number | null>(null);
+  const [activeSprintIndex, setActiveSprintIndex] = useState<number | null>(
+    null,
+  );
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State voor mobiel menu
 
   const sprints = [
@@ -21,14 +23,13 @@ export const Navigation = () => {
   };
 
   return (
-    
     <nav
       className="w-full sticky top-0 z-50 shadow-sm"
       style={{ background: "var(--Color-Cream, #FFF)" }}
       role="navigation"
       aria-label="Main navigation"
     >
-      <div className="w-full flex items-center justify-between px-6 py-6 lg:px-16">        
+      <div className="w-full flex items-center justify-between px-6 py-6 lg:px-16">
         {/* Logo */}
         <a href="/" aria-label="Home" className="z-50">
           <img
@@ -39,7 +40,7 @@ export const Navigation = () => {
         </a>
 
         {/* Mobiele Hamburger Knop */}
-        <button 
+        <button
           className="lg:hidden z-50 text-black p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
@@ -48,15 +49,17 @@ export const Navigation = () => {
         </button>
 
         {/* Menu (Desktop & Mobiel) */}
-        <ul className={`
+        <ul
+          className={`
           /* Desktop styling (ongewijzigd) */
           lg:flex lg:gap-10 lg:static lg:flex-row lg:bg-transparent lg:p-0 lg:shadow-none lg:w-auto lg:h-auto
           
           /* Mobiele styling (verborgen tenzij open) */
-          ${isMenuOpen ? 'flex' : 'hidden'}
+          ${isMenuOpen ? "flex" : "hidden"}
           flex-col gap-6 absolute top-0 left-0 w-full h-screen bg-white items-center justify-center text-xl
           transition-all duration-300 ease-in-out
-        `}>
+        `}
+        >
           {sprints.map((sprint, index) => (
             <li key={sprint.id} className="w-full text-center lg:w-auto">
               <a
