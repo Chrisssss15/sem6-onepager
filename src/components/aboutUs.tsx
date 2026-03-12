@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { X } from "lucide-react";
 
-// 1. Corrigeer de import namen (geen streepjes!)
+// --- AFBEELDING IMPORT ---
 import alyssaImg from "../assets/alyssa.png";
 import bartImg from "../assets/bart.png";
 import chrisImg from "../assets/chris.png";
@@ -15,13 +15,14 @@ import fouziaImgPopup from "../assets/fouzia-popup.png";
 import jamieImgPopup from "../assets/jamie-popup.png";
 import shayenImgPopup from "../assets/shayen-popup.png";
 
+// --- DATA VAN TEAMLEDEN IMPORTEREN ---
 const teamMembers = [
   {
     name: "Shayen Manbodh",
-    image: shayenImg, // Voeg de afbeelding toe aan het object
-    popupImage: shayenImgPopup, // Voeg de popup afbeelding toe
-    bio: "Hoi, ik ben Shayen en ik studeer ADS&AI. Binnen het team houd ik me vooral bezig met data in alle vormen en mate. Buiten school om sport ik veel en hou ik ervan om mijn favoriete team FC Barcelona te supporten.",
-    linkedin: "https://www.linkedin.com/in/shayen-manbodh-364733291/",
+    image: shayenImg, // AFBEELDING AAN DE VOORKANT
+    popupImage: shayenImgPopup, // AFBEELDING IN DE POPUP
+    bio: "Hoi, ik ben Shayen en ik studeer ADS&AI. Binnen het team houd ik me vooral bezig met data in alle vormen en mate. Buiten school om sport ik veel en hou ik ervan om mijn favoriete team FC Barcelona te supporten.", // INFORMATIE VAN DE TEAMLID IN DE POPUP
+    linkedin: "https://www.linkedin.com/in/shayen-manbodh-364733291/", // URL VAN LINKEDIN
   },
   {
     name: "Alyssa Muyden",
@@ -64,11 +65,12 @@ const teamMembers = [
   },
 ];
 
+// STANDAARD FRAME VOOR DE FOTO, ALLE FRAME DEZELFDE AFMETING
 const BlobFrame = ({ children }: { children: React.ReactNode }) => (
   <div className="relative w-56 h-56 md:w-64 md:h-64 mx-auto">
     <div className="absolute inset-0 flex items-center justify-center">
       <div className="w-44 h-44 md:w-52 md:h-52 flex items-center justify-center">
-        {children}
+        {children} {/* Hier komt de <img> tag in terecht */}
       </div>
     </div>
   </div>
@@ -107,7 +109,7 @@ const AboutSection = () => {
         </div>
       </div>
 
-      {/* Modal */}
+      {/* STYLING VOOR DE POPUP - WANNEER POPUP TEVOORSCHIJNKOMT */}
       {selectedMember !== null && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
@@ -117,14 +119,14 @@ const AboutSection = () => {
             className="relative bg-white rounded-2xl shadow-xl max-w-3xl w-full max-h-[90vh] overflow-hidden grid grid-cols-1 md:grid-cols-2"
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Sluitknop */}
             <button
               onClick={() => setSelectedMember(null)}
               className="absolute top-4 right-4 z-10 text-foreground/70 hover:text-foreground transition-colors"
             >
               <X className="h-6 w-6" />
             </button>
-
-            {/* Gebruik hier de popupImage van het geselecteerde lid */}
+            {/* Linkerkant van de popup: De Foto */}{" "}
             <div className="bg-muted h-full">
               <img
                 src={teamMembers[selectedMember].popupImage}
@@ -132,7 +134,7 @@ const AboutSection = () => {
                 className="w-full h-full object-cover min-h-[300px]"
               />
             </div>
-
+            {/* Rechterkant van de popup: De Tekst & Info */}
             <div className="p-8 md:p-10 flex flex-col justify-between">
               <div>
                 <h3 className="text-3xl md:text-4xl font-serif italic text-foreground mb-6">
@@ -143,6 +145,7 @@ const AboutSection = () => {
                 </p>
               </div>
 
+              {/* LinkedIn Knop */}
               <div className="flex justify-end mt-6">
                 <a
                   href={teamMembers[selectedMember].linkedin}

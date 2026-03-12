@@ -7,7 +7,7 @@ interface SprintItem {
   content: string;
 }
 
-// Hier zijn je sprintItems weer terug!
+// DIT IS DE INHOUD: Een lijstje met alle onderwerpen en teksten
 const sprintItems: SprintItem[] = [
   {
     title: "De huidige context",
@@ -30,10 +30,15 @@ const sprintItems: SprintItem[] = [
       "Onze ontwerpvraag luidt:\n\n“Hoe kunnen we jongeren helpen bewuster om te gaan met hun online gedrag, zodat zij een gezondere balans ervaren tussen online en offline activiteiten?”\n\nMet deze vraag richten we ons niet op het verminderen van schermtijd, maar op het vergroten van bewustzijn en regie. We onderzoeken hoe we jongeren kunnen ondersteunen in het herkennen van hun eigen gedrag, het maken van bewuste keuzes en het ontwikkelen van een digitale leefstijl die past bij hun welzijn en dagelijks leven.",
   },
 ];
+
+// Dit onthoudt welk vakje 'open' staat. Standaard staat het eerste vakje (0) open.
 const SprintZeroSection = () => {
   // Verander de initial state van null naar 0
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
+  // DE KLIK-FUNCTIE:
+  // Als je op een vakje klikt dat al open is, gaat het dicht (null).
+  // Als je op een ander vakje klikt, gaat dat vakje open.
   const toggleItem = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
@@ -44,10 +49,12 @@ const SprintZeroSection = () => {
       className="min-h-screen bg-[#292122] flex items-center py-20"
     >
       <div className="container mx-auto px-6 lg:px-16 max-w-2xl">
+        {/* TITEL VAN DE PAGINA */}
         <h2 className="text-5xl md:text-6xl font-serif italic text-center text-white mb-14">
           Sprint 0
         </h2>
 
+        {/* HET UITKLAPMENU (De lijst met items) */}
         <div className="flex flex-col gap-4">
           {sprintItems.map((item, index) => {
             const isOpen = activeIndex === index;
@@ -57,12 +64,14 @@ const SprintZeroSection = () => {
                 key={index}
                 className="bg-[#FFFDEB] rounded-xl overflow-hidden relative"
               >
+                {/* DE KNOP (Titel van het vakje) */}
                 <button
                   onClick={() => toggleItem(index)}
                   className="w-full flex items-center justify-between px-6 py-5 text-black text-left text-base font-medium transition-colors hover:opacity-90 relative"
                   aria-expanded={isOpen}
                 >
                   {item.title}
+                  {/* Het pijltje draait 180 graden om als het vakje open gaat */}
                   <ChevronDown
                     className={`w-5 h-5 transition-transform duration-300 ${
                       isOpen ? "rotate-180" : ""
@@ -73,16 +82,16 @@ const SprintZeroSection = () => {
                   )}
                 </button>
 
+                {/* DE UITKLAP-ANIMATIE */}
                 <AnimatePresence initial={false}>
-                  {" "}
-                  {/* initial={false} voorkomt animatie bij de allereerste render */}
                   {isOpen && (
                     <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      initial={{ height: 0, opacity: 0 }} // STARTPUNT: ONTZICHTBAAR EN PLAT
+                      animate={{ height: "auto", opacity: 1 }} // Doel: juiste hoogte en zichtbaar
+                      exit={{ height: 0, opacity: 0 }} // BIJ DICHT GAAN WEER PLAT WORDEN
+                      transition={{ duration: 0.3, ease: "easeInOut" }} // HOE SNEL HET BEWEEGT
                     >
+                      {/* DE TEKST IN HET VAKJE */}
                       <div className="px-6 pt-6 pb-8 text-black/80 text-sm leading-relaxed whitespace-pre-line">
                         {item.content}
                       </div>

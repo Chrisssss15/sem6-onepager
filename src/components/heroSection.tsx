@@ -1,7 +1,7 @@
 import miniLogo from "../assets/mini-logo.svg";
 
 const HeroSection = () => {
-  // SvgIconA - De abstracte vorm
+  // SVG APPA LETTER A
   const SvgIconA = () => (
     <svg
       viewBox="0 0 120 138"
@@ -16,7 +16,7 @@ const HeroSection = () => {
     </svg>
   );
 
-  // SvgIconP - De letter P vorm
+  // SVG APPA LETTER P
   const SvgIconP = () => (
     <svg
       viewBox="0 0 134 182"
@@ -35,9 +35,8 @@ const HeroSection = () => {
     <section className="relative min-h-screen bg-[#FFFDEB] flex items-center overflow-hidden">
       <div className="container mx-auto px-6 lg:px-16 flex flex-col lg:flex-row items-center justify-between gap-12">
         {/* Linkerkant */}
-        {/* Linkerkant Container */}
         <div className="flex flex-col gap-6 w-full max-w-xl relative z-10 px-4 md:px-0">
-          {/* Grote ballon */}
+          {/* GROTE CHAT */}
           <div className="flex items-end gap-3 w-full">
             <img
               src={miniLogo}
@@ -68,7 +67,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Kleine ballon */}
+          {/* KLEINE CHAT */}
           <div className="flex items-end gap-3 w-full">
             <img
               src={miniLogo}
@@ -98,9 +97,8 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Rechterkant - Ronde Logo SVG + Rij Icoontjes */}
+        {/* Rechterkant - APPA logo ronddraaien */}
         <div className="flex flex-col items-center gap-8">
-          {/* Voeg hier de className "animate-spin-slow" toe */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 227 222"

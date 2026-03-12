@@ -2,12 +2,15 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react"; // Importeer icoontjes voor mobiel
 import logo from "../assets/logo.svg";
 
+// Dit onthoudt op welke Sprint je hebt geklikt (om die tekst dikgedrukt te maken)
 export const Navigation = () => {
   const [activeSprintIndex, setActiveSprintIndex] = useState<number | null>(
     null,
   );
+  // Dit is de schakelaar voor het mobiele menu: true is OPEN, false is DICHT
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State voor mobiel menu
 
+  // De lijst met linkjes die in het menu komen te staan
   const sprints = [
     { id: 0, label: "Sprint 0" },
     { id: 1, label: "Sprint 1" },
@@ -17,8 +20,9 @@ export const Navigation = () => {
     { id: 5, label: "Sprint 5" },
   ];
 
+  // Wat er gebeurt als je op een menu-item klikt:
   const handleLinkClick = (index: number) => {
-    setActiveSprintIndex(index);
+    setActiveSprintIndex(index); // De geklikte sprint wordt 'actief' (dikgedrukt)
     setIsMenuOpen(false); // Sluit menu na klik op mobiel
   };
 
