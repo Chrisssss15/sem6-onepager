@@ -83,7 +83,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen bg-[#FFFDEB] flex items-center overflow-hidden">
-      <div className="container mx-auto px-6 lg:px-16 flex flex-col lg:flex-row items-center justify-between gap-12">
+      <div className="container mx-auto px-6 lg:px-16 flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
         {/* LINKERKANT */}
         <div className="flex flex-col w-full max-w-xl relative z-10 px-4 md:px-0">
           {/* CONTAINER VOOR CHAT 1: We gebruiken transform om hem naar beneden te duwen als chat 2 er nog niet is */}
