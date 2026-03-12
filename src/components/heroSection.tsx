@@ -47,21 +47,6 @@ const HeroSection = () => {
     return () => clearTimeout(timeout); // VEILIGHEID: STOP ALLES BIJ AFSLUITEN
   }, []);
 
-  useEffect(() => {
-    if (showSecondChat) {
-      let j = 0;
-      const typingInterval2 = setInterval(() => {
-        if (j < text2.length) {
-          setDisplayedText2(text2.slice(0, j + 1));
-          j++;
-        } else {
-          clearInterval(typingInterval2);
-        }
-      }, 40);
-      return () => clearInterval(typingInterval2);
-    }
-  }, [showSecondChat]);
-
   // SVG APPA LETTER A
   const SvgIconA = () => (
     <svg
