@@ -5,14 +5,11 @@
 // import TeamValuesSection from "./components/teamValues";
 // import Sprint0Section from "./components/sprint-0";
 
-
-
-
 // function App() {
 //   return (
 //     <div className="font-sans bg-[#FFFDEB]">
 //       <Navigation />
-      
+
 //       {/* Elke sectie krijgt h-screen (of min-h-screen) en sticky top-0 */}
 //       <main className="relative">
 //         <section className="sticky top-0 h-screen z-10">
@@ -37,18 +34,12 @@
 
 // export default App;
 
-
-
-
-import './App.css'
+import "./App.css";
 import { Navigation } from "./components/navBar";
 import HeroSection from "./components/heroSection";
 import AboutUsSection from "./components/aboutUs";
 import TeamValuesSection from "./components/teamValues";
 import Sprint0Section from "./components/sprint-0";
-
-
-
 
 function App() {
   return (
