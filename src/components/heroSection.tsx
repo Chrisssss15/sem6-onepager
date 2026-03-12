@@ -1,6 +1,67 @@
+import { useState, useEffect } from "react";
 import miniLogo from "../assets/mini-logo.svg";
 
 const HeroSection = () => {
+  // DE TEKSTEN DIE GETYPT MOETEN WORDEN
+  const text1 =
+    "Wij zijn een multidisciplinair team dat onderzoekt hoe jongeren bewuster online kunnen zijn en een gezondere online-offline balans kunnen vinden.";
+  const text2 = "Sprint 0 is live, ontdek onze eerste inzichten! 🚀";
+
+  // STATES VOOR DE TEKST EN ANIMATIES
+  const [displayedText1, setDisplayedText1] = useState("");
+  const [displayedText2, setDisplayedText2] = useState("");
+  const [showFirstChat, setShowFirstChat] = useState(false); // CONTROLEERT OMHOOG SCHUIVEN BOX 1
+  const [showSecondChat, setShowSecondChat] = useState(false); // CONTROLEERT OMHOOG SCHUIVEN BOX 2
+
+  useEffect(() => {
+    // TYPE ANIMATIE
+    const typeText = (
+      fullText: string, // De volledige zin die getypt moet worden
+      setter: (t: string) => void, // De plek waar de letters getoond moeten worden (state)
+      onComplete?: () => void,
+    ) => {
+      let i = 0; // We beginnen bij de eerste letter (index 0)
+      const interval = setInterval(() => {
+        setter(fullText.slice(0, i + 1)); // PAKT STEEDS 1 LETTER EXTRA
+        i++; // pak steeds een letter bij
+        if (i >= fullText.length) {
+          clearInterval(interval); // stop als de zin klaar is
+          onComplete?.(); // voer de volgende stap als die er is
+        }
+      }, 25); // SNELHEID VAN HET TYPEN
+    };
+
+    setShowFirstChat(true); // LAAT BOX 1 OMHOOG KOMEN
+
+    const timeout = setTimeout(() => {
+      // WACHT 1 SECONDE VOORDAT HET TYPEN START
+      typeText(text1, setDisplayedText1, () => {
+        // DIT GEBEURT PAS ALS TEKST 1 KLAAR IS
+        setTimeout(() => {
+          setShowSecondChat(true); // LAAT BOX 2 OMHOOG KOMEN
+          typeText(text2, setDisplayedText2); // START TYPEN TEKST 2
+        }, 500); // PAUZE TUSSEN DE TWEE CHATS
+      });
+    }, 1000); // BEGIN-VERTRAGING
+
+    return () => clearTimeout(timeout); // VEILIGHEID: STOP ALLES BIJ AFSLUITEN
+  }, []);
+
+  useEffect(() => {
+    if (showSecondChat) {
+      let j = 0;
+      const typingInterval2 = setInterval(() => {
+        if (j < text2.length) {
+          setDisplayedText2(text2.slice(0, j + 1));
+          j++;
+        } else {
+          clearInterval(typingInterval2);
+        }
+      }, 40);
+      return () => clearInterval(typingInterval2);
+    }
+  }, [showSecondChat]);
+
   // SVG APPA LETTER A
   const SvgIconA = () => (
     <svg
@@ -36,8 +97,11 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 lg:px-16 flex flex-col lg:flex-row items-center justify-between gap-12">
         {/* Linkerkant */}
         <div className="flex flex-col gap-6 w-full max-w-xl relative z-10 px-4 md:px-0">
-          {/* GROTE CHAT */}
-          <div className="flex items-end gap-3 w-full">
+          {/* EERSTE CHATBOX */}
+          <div
+            className={`flex items-end gap-3 w-full transition-all duration-700 ease-out transform 
+              ${showFirstChat ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+          >
             <img
               src={miniLogo}
               alt="Logo"
@@ -47,28 +111,31 @@ const HeroSection = () => {
               className="relative flex items-center bg-white shadow-sm overflow-hidden w-full md:w-[533px] min-h-[150px] md:h-[178px]"
               style={{
                 borderRadius: "30px 30px 30px 0",
-                padding: "clamp(20px, 5vw, 40px)", // Dynamische padding: kleiner op mobiel
+                padding: "clamp(20px, 5vw, 40px)",
               }}
             >
               <p
                 style={{
                   color: "#292122",
                   fontFamily: '"Work Sans", sans-serif',
-                  fontSize: "clamp(18px, 4vw, 25px)", // Tekst schaalt mee tussen 18px en 25px
+                  fontSize: "clamp(18px, 4vw, 25px)",
                   fontWeight: "300",
                   lineHeight: "1.4",
-                  fontStyle: "normal",
                 }}
               >
-                Wij zijn een multidisciplinair team dat onderzoekt hoe jongeren
-                bewuster online kunnen zijn en een gezondere online-offline
-                balans kunnen vinden.
+                {displayedText1}
+                {displayedText1.length < text1.length && (
+                  <span className="animate-pulse border-r-2 border-[#292122] ml-1"></span>
+                )}
               </p>
             </div>
           </div>
 
-          {/* KLEINE CHAT */}
-          <div className="flex items-end gap-3 w-full">
+          {/* TWEEDE CHATBOX */}
+          <div
+            className={`flex items-end gap-3 w-full transition-all duration-700 ease-out transform 
+              ${showSecondChat ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+          >
             <img
               src={miniLogo}
               alt="Logo"
@@ -88,10 +155,12 @@ const HeroSection = () => {
                   fontSize: "clamp(18px, 4vw, 25px)",
                   fontWeight: "300",
                   lineHeight: "1.4",
-                  fontStyle: "normal",
                 }}
               >
-                Sprint 0 is live, ontdek onze eerste inzichten! 🚀
+                {displayedText2}
+                {showSecondChat && displayedText2.length < text2.length && (
+                  <span className="animate-pulse border-r-2 border-[#292122] ml-1"></span>
+                )}
               </p>
             </div>
           </div>
