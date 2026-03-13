@@ -80,9 +80,9 @@ const AboutSection = () => {
   const [selectedMember, setSelectedMember] = useState<number | null>(null);
 
   return (
-    <section className="min-h-screen flex items-center py-20 bg-white">
+    <section className=" py-20 bg-white">
       <div className="container mx-auto px-6 lg:px-16">
-        <h2 className="text-5xl md:text-6xl font-serif italic text-center text-foreground mb-16">
+        <h2 className="text-5xl md:text-6xl font-serif italic text-center text-foreground mb-14">
           Over ons
         </h2>
 
@@ -108,7 +108,6 @@ const AboutSection = () => {
           ))}
         </div>
       </div>
-
       {/* STYLING VOOR DE POPUP - WANNEER POPUP TEVOORSCHIJNKOMT */}
       {selectedMember !== null && (
         <div
