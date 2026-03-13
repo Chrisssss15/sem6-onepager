@@ -35,7 +35,7 @@ export const Navigation = () => {
     >
       <div className="w-full flex items-center justify-between px-6 py-6 lg:px-16">
         {/* Logo */}
-        <a href="/" aria-label="Home" className="z-50">
+        <a href="/2025_2026/idp_ds_t8/" aria-label="Home" className="z-50">
           <img
             className="w-32 md:w-40 h-auto" // Iets kleiner op heel smalle schermen
             alt="Appa logo"
