@@ -43,7 +43,7 @@ const teamMembers = [
     name: "Bart Meeuwenoord",
     image: bartImg,
     popupImage: bartImgPopup,
-    bio: `Hi! Ik ben Bart, CMD-student (Communicatie & Multimedia Design) en binnen ons team werk ik als designer en onderzoeker. 
+    bio: `Hi! Ik ben Bart, CMD-student (Communicatie & Multimedia Design) en binnen ons team werk ik als designer en onderzoeker.
         Ik vind het leuk om ideeën te vertalen naar ontwerpen die niet alleen mooi zijn, maar ook goed werken voor de gebruiker.
         In mijn vrije tijd sport ik graag en ben ik vaak bezig met ontwerpen, omdat ik het leuk vind om creatief bezig te zijn en nieuwe ideeën uit te proberen.`,
     linkedin: "#",
@@ -65,12 +65,12 @@ const teamMembers = [
   },
 ];
 
-// STANDAARD FRAME VOOR DE FOTO, ALLE FRAME DEZELFDE AFMETING
+// --- FRAME VOOR FOTO ---
 const BlobFrame = ({ children }: { children: React.ReactNode }) => (
-  <div className="relative w-56 h-56 md:w-64 md:h-64 mx-auto">
+  <div className="relative w-36 h-36 sm:w-44 sm:h-44 md:w-56 md:h-56 mx-auto">
     <div className="absolute inset-0 flex items-center justify-center">
-      <div className="w-44 h-44 md:w-52 md:h-52 flex items-center justify-center">
-        {children} {/* Hier komt de <img> tag in terecht */}
+      <div className="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 flex items-center justify-center">
+        {children}
       </div>
     </div>
   </div>
@@ -80,13 +80,15 @@ const AboutSection = () => {
   const [selectedMember, setSelectedMember] = useState<number | null>(null);
 
   return (
-    <section className=" py-20 bg-white">
+    <section className="min-h-screen py-20 bg-white">
       <div className="container mx-auto px-6 lg:px-16">
-        <h2 className="text-5xl md:text-6xl font-serif italic text-center text-foreground mb-14">
+        {/* Titel */}
+        <h2 className="text-5xl md:text-6xl font-serif italic text-center text-foreground mb-12">
           Over ons
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-14 gap-x-8 max-w-5xl mx-auto">
+        {/* Team grid */}
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-y-14 gap-x-8 max-w-5xl mx-auto">
           {teamMembers.map((member, index) => (
             <div
               key={member.name}
@@ -94,57 +96,61 @@ const AboutSection = () => {
               onClick={() => setSelectedMember(index)}
             >
               <BlobFrame>
-                {/* Gebruik hier member.image i.p.v. teamPhoto */}
                 <img
                   src={member.image}
                   alt={member.name}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </BlobFrame>
-              <p className="text-foreground text-lg md:text-xl font-light tracking-wide">
+
+              <p className="text-foreground text-sm sm:text-base md:text-xl font-light tracking-wide text-center">
                 {member.name}
               </p>
             </div>
           ))}
         </div>
       </div>
-      {/* STYLING VOOR DE POPUP - WANNEER POPUP TEVOORSCHIJNKOMT */}
+
+      {/* POPUP */}
       {selectedMember !== null && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
           onClick={() => setSelectedMember(null)}
         >
           <div
-            className="relative bg-white rounded-2xl shadow-xl max-w-3xl w-full max-h-[90vh] overflow-hidden grid grid-cols-1 md:grid-cols-2"
+            className="relative bg-white rounded-3xl shadow-xl max-w-sm md:max-w-3xl w-full max-h-[95vh] overflow-hidden grid grid-cols-1 md:grid-cols-2"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Sluitknop */}
+            {/* Close button */}
             <button
               onClick={() => setSelectedMember(null)}
-              className="absolute top-4 right-4 z-10 text-foreground/70 hover:text-foreground transition-colors"
+              className="absolute top-4 right-4 z-10 text-foreground/70 hover:text-foreground"
             >
               <X className="h-6 w-6" />
             </button>
-            {/* Linkerkant van de popup: De Foto */}{" "}
-            <div className="bg-muted h-full">
+
+            {/* Foto */}
+            <div className="bg-muted">
               <img
                 src={teamMembers[selectedMember].popupImage}
                 alt={teamMembers[selectedMember].name}
-                className="w-full h-full object-cover min-h-[300px]"
+                className="w-full h-72 md:h-full object-cover object-top"
               />
             </div>
-            {/* Rechterkant van de popup: De Tekst & Info */}
-            <div className="p-8 md:p-10 flex flex-col justify-between">
+
+            {/* Tekst */}
+            <div className="p-5 md:p-8 flex flex-col justify-between">
               <div>
-                <h3 className="text-3xl md:text-4xl font-serif italic text-foreground mb-6">
+                <h3 className="text-2xl md:text-4xl font-serif italic text-foreground mb-5">
                   {teamMembers[selectedMember].name}
                 </h3>
+
                 <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
                   {teamMembers[selectedMember].bio}
                 </p>
               </div>
 
-              {/* LinkedIn Knop */}
+              {/* LinkedIn knop */}
               <div className="flex justify-end mt-6">
                 <a
                   href={teamMembers[selectedMember].linkedin}
