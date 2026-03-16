@@ -4,6 +4,7 @@ import HeroSection from "./components/heroSection";
 import AboutUsSection from "./components/aboutUs";
 import TeamValuesSection from "./components/teamValues";
 import Sprint0Section from "./components/sprint-0";
+import Test from "./components/test";
 
 function App() {
   return (
@@ -16,17 +17,21 @@ function App() {
           <HeroSection />
         </section>
 
-        <section className="sticky top-0 h-screen z-20 shadow-[0_-20px_50px_rgba(0,0,0,0.1)]">
+        <section className="sticky top-0 h-screen z-10">
+          <Test />
+        </section>
+
+        {/* <section className="sticky top-0 h-screen z-20 shadow-[0_-20px_50px_rgba(0,0,0,0.1)]">
           <AboutUsSection />
         </section>
 
         <section className="sticky top-0 h-screen z-30 shadow-[0_-20px_50px_rgba(0,0,0,0.1)]">
           <TeamValuesSection />
-        </section>
+        </section> */}
 
-        <section className="sticky top-0 h-screen z-40 shadow-[0_-20px_50px_rgba(0,0,0,0.1)]">
+        {/* <section className="sticky top-0 h-screen z-40 shadow-[0_-20px_50px_rgba(0,0,0,0.1)]">
           <Sprint0Section />
-        </section>
+        </section> */}
       </main>
     </div>
   );
