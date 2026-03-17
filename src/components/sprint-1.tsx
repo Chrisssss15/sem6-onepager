@@ -246,7 +246,10 @@ const SprintOneSection = () => {
   };
 
   return (
-    <section className="py-20 bg-foreground text-primary-foreground">
+    <section
+      id="sprint-1"
+      className="py-20 bg-foreground text-primary-foreground"
+    >
       <div className="container mx-auto px-6 lg:px-16 max-w-4xl">
         {/* Title */}
         <h2 className="text-5xl md:text-6xl font-serif italic text-center mb-8">
@@ -369,80 +372,53 @@ const SprintOneSection = () => {
         <div className="relative">
           <div
             ref={scrollRef}
-            className="
-    flex gap-6 sm:gap-8 
-    overflow-x-auto 
-    px-[10vw] lg:px-[20vw] 
-    pb-4 
-    snap-x snap-mandatory 
-    scrollbar-hide
-  "
+            className="flex gap-6 sm:gap-8 overflow-x-auto px-[10vw] lg:px-[20vw] pb-4 snap-x snap-mandatory scrollbar-hide"
           >
             {filteredCards.map((card, index) => (
               <div
                 key={index}
-                className="
-      snap-center shrink-0
-      
-w-[90vw] sm:w-[80vw] lg:w-[70vw]
-max-w-[958px]
-
-      bg-[#8B6F66]
-      rounded-[28px]
-      overflow-hidden
-
-      flex flex-col
-    "
+                className="snap-center shrink-0 w-[90vw] sm:w-[80vw] lg:w-[70vw] max-w-[958px] bg-[#8B6F66] rounded-[28px] overflow-hidden flex flex-col"
               >
                 {/* 🔝 BOVEN HELFT (Titel) */}
-<div className="px-6 sm:px-8 lg:px-10 py-6 sm:py-8">
-<h4 className="
-  text-xl sm:text-2xl lg:text-3xl
-  font-semibold text-white
-  leading-tight
-  max-w-[958px]
-  py-12 px-8
-">
-    {card.title}
-  </h4>
-</div>
+                <div className="px-6 sm:px-8 lg:px-10 py-6 sm:py-8">
+                  <h4
+                    className="text-xl sm:text-2xl lg:text-3xl font-semibold text-white leading-tight max-w-[958px] py-12 px-8"
+                  >
+                    {card.title}
+                  </h4>
+                </div>
 
                 {/* 🔽 ONDER HELFT (Content) */}
-<div
-  className="
-    bg-[#EDEAE8]
+                <div
+                  className="bg-[#EDEAE8]
 
-    flex-1   ← 🔥 laat content groeien
+flex-1   ← 🔥 laat content groeien
 
-    px-10 sm:px-12 lg:px-18
-    py-6 sm:py-8
-
-    flex flex-col lg:flex-row
-    gap-6
+    px-10 sm:px-12 lg:px-18 py-6 sm:py-8 flex flex-col lg:flex-row gap-6
   "
->
-  {/* Toelichting */}
-  <div className="flex-1 overflow-y-auto pr-2">
-    <p className="text-xs sm:text-sm font-semibold text-gray-800 mb-2">
-      Toelichting:
-    </p>
-    <p className="text-xs sm:text-sm leading-relaxed text-gray-700">
-      {card.toelichting}
-    </p>
-  </div>
+                >
+                  {/* Toelichting */}
+                  <div className="flex-1 overflow-y-auto pr-2">
+                    <p className="text-xs sm:text-sm font-semibold text-gray-800 mb-2">
+                      Toelichting:
+                    </p>
+                    <p className="text-xs sm:text-sm leading-relaxed text-gray-700">
+                      {card.toelichting}
+                    </p>
+                  </div>
 
-  {/* Bronnen */}
-  <div className="lg:w-[220px] shrink-0 overflow-y-auto pr-2">
-    <p className="text-xs sm:text-sm font-semibold text-gray-800 mb-2">
-      Bronnen:
-    </p>
-    <ul className="list-disc list-inside text-xs sm:text-sm text-gray-700 space-y-1">
-      {card.bronnen.map((bron, i) => (
-        <li key={i}>{bron}</li>
-      ))}
-    </ul>
-  </div>
-</div>
+                  {/* Bronnen */}
+                  <div className="lg:w-[220px] shrink-0 overflow-y-auto pr-2">
+                    <p className="text-xs sm:text-sm font-semibold text-gray-800 mb-2">
+                      Bronnen:
+                    </p>
+                    <ul className="list-disc list-inside text-xs sm:text-sm text-gray-700 space-y-1">
+                      {card.bronnen.map((bron, i) => (
+                        <li key={i}>{bron}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
