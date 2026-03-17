@@ -1,4 +1,3 @@
-import miniLogo from "../assets/mini-logo.svg";
 import alyssaImg from "../assets/alyssa-contact.png";
 
 // SVG APPA LETTER A
