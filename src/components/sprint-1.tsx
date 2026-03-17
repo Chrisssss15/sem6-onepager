@@ -269,12 +269,11 @@ const SprintOneSection = () => {
         {/* Timeline */}
         <div className="relative">
           {/* Vertical dashed line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-px border-l-3 border-dashed border-primary-foreground/20 -translate-x-px" />
-
+<div className=" l-6 md:pl-0 absolute left-1/2 top-20 -bottom-20 w-px border-l-2 border-dashed border-primary-foreground/40 -translate-x-1/2" />
           {timelineItems.map((item, index) => (
             <div key={index} className="relative mb-24 last:mb-16">
               {/* Timeline icon */}
-              <div className="absolute left-1/2 -translate-x-1/2 -top-2 z-10 w-10 h-10 rounded-full bg-foreground flex items-center justify-center">
+              <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-12 z-10 w-10 h-10 rounded-full bg-foreground flex items-center justify-center">
                 <img src={miniLogo} alt="" className="w-7 h-7 " />
               </div>
 
@@ -321,7 +320,7 @@ const SprintOneSection = () => {
           ))}
 
           {/* Bottom icon */}
-          <div className="absolute left-1/2 -translate-x-1/2 bottom-0 z-10 w-10 h-10 rounded-full bg-foreground flex items-center justify-center">
+          <div className="absolute left-1/2 -translate-x-1/2 -bottom-20 z-10 w-10 h-10 rounded-full bg-foreground flex items-center justify-center">
             <img src={miniLogo} alt="" className="w-7 h-7 " />
           </div>
         </div>
