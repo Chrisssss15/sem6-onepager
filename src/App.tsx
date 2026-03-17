@@ -4,65 +4,46 @@ import HeroSection from "./components/heroSection";
 import AboutUsSection from "./components/aboutUs";
 import TeamValuesSection from "./components/teamValues";
 import Sprint0Section from "./components/sprint-0";
-// import Test from "./components/test";
+import Sprint1Section from "./components/sprint-1";
 import Footer from "./components/footer";
-
-// function App() {
-//   return (
-//     <div className="font-sans bg-[#FFFDEB]">
-//       <Navigation />
-
-//       {/* Elke sectie krijgt h-screen (of min-h-screen) en sticky top-0 */}
-//       <main className="relative">
-//         <section className="sticky top-0 h-screen z-10">
-//           <HeroSection />
-//         </section>
-
-//         <section className="sticky top-0 h-screen z-10">
-//           <Test />
-//         </section>
-
-//         {/* <section className="sticky top-0 h-screen z-20 shadow-[0_-20px_50px_rgba(0,0,0,0.1)]">
-//           <AboutUsSection />
-//         </section>
-
-//         <section className="sticky top-0 h-screen z-30 shadow-[0_-20px_50px_rgba(0,0,0,0.1)]">
-//           <TeamValuesSection />
-//         </section> */}
-
-//         {/* <section className="sticky top-0 h-screen z-40 shadow-[0_-20px_50px_rgba(0,0,0,0.1)]">
-//           <Sprint0Section />
-//         </section> */}
-
-//         <section className="sticky top-0 h-screen z-10">
-//           <Footer />
-//         </section>
-//       </main>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-// import "./App.css";
-// import { Navigation } from "./components/navBar";
-// import HeroSection from "./components/heroSection";
-// import AboutUsSection from "./components/aboutUs";
-// import TeamValuesSection from "./components/teamValues";
-// import Sprint0Section from "./components/sprint-0";
 
 function App() {
   return (
-    <>
-      <div className="font-sans">
+    <div className="font-sans bg-white">
+      
+      {/* Navbar altijd bovenaan */}
+      <div className="fixed top-0 left-0 w-full z-50">
         <Navigation />
-        <HeroSection />
-        <AboutUsSection />
-        <TeamValuesSection />
-        <Sprint0Section />
-        <Footer />
       </div>
-    </>
+
+      <main className="pt-[80px]">
+        <section className="min-h-screen">
+          <HeroSection />
+        </section>
+
+        <section className="min-h-screen">
+          <AboutUsSection />
+        </section>
+
+        <section className="min-h-screen">
+          <TeamValuesSection />
+        </section>
+
+        <section className="min-h-screen">
+          <Sprint0Section />
+        </section>
+
+        <section className="min-h-screen">
+          <Sprint1Section />
+        </section>
+
+        {/* Footer gewoon normaal */}
+        <footer className="min-h-[40vh]">
+          <Footer />
+        </footer>
+
+      </main>
+    </div>
   );
 }
 
