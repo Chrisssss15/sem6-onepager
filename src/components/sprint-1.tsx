@@ -269,12 +269,12 @@ const SprintOneSection = () => {
         {/* Timeline */}
         <div className="relative">
           {/* Vertical dashed line */}
-<div className=" l-6 md:pl-0 absolute left-1/2 top-20 -bottom-20 w-px border-l-2 border-dashed border-primary-foreground/40 -translate-x-1/2" />
+        <div className=" lg-6 md:pl-0 absolute left-1/2 top-20 -bottom-20 w-px border-l-2 border-dashed border-primary-foreground/40 -translate-x-1/2" />
           {timelineItems.map((item, index) => (
             <div key={index} className="relative mb-24 last:mb-16">
               {/* Timeline icon */}
-              <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-12 z-10 w-10 h-10 rounded-full bg-foreground flex items-center justify-center">
-                <img src={miniLogo} alt="" className="w-7 h-7 " />
+              <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-14 z-10 w-10 h-10 rounded-full bg-foreground flex items-center justify-center">
+                <img src={miniLogo} alt="" className="w-10 h-7 " />
               </div>
 
               <div
@@ -353,7 +353,7 @@ const SprintOneSection = () => {
               onClick={() => setActiveCategory(cat)}
               className={`
         px-4 py-2 text-sm
-        sm:px-6 sm:py-3 sm:text-basemd:px-8 md:py-4 md:text-base rounded-2xl border-2 font-medium whitespace-nowrap transition-all duration-200
+        sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-base rounded-2xl border-2 font-medium whitespace-nowrap transition-all duration-200
 
         ${
           activeCategory === cat
@@ -389,11 +389,7 @@ const SprintOneSection = () => {
 
                 {/* 🔽 ONDER HELFT (Content) */}
                 <div
-                  className="bg-[#EDEAE8]
-
-flex-1   ← 🔥 laat content groeien
-
-    px-10 sm:px-12 lg:px-18 py-6 sm:py-8 flex flex-col lg:flex-row gap-6
+                  className="bg-[#EDEAE8] flex-1 px-10 sm:px-12 lg:px-18 py-6 sm:py-8 flex flex-col lg:flex-row gap-6
   "
                 >
                   {/* Toelichting */}
