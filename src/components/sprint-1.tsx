@@ -9,7 +9,7 @@ import img3 from "../assets/deGewensteSituatie-sprint1.svg";
 const timelineItems = [
   {
     title: "De huidige situatie",
-    text: "Jonge kinderen groeien op in een digitale omgeving waarin smartphones, social media en games een grote rol spelen in hun dagelijks leven. Door functies zoals algoritmes, autoplay en eindeloze feeds blijven zij vaak langer online dan zij van plan waren. Tegelijkertijd zijn kinderen zich nog weinig bewust van hoe digitale platformen hun gedrag beïnvloeden en hoe hun schermgebruik impact heeft op hun welzijn. Hierdoor kan het lastig zijn om grip te krijgen op een gezonde balans tussen online en offline leven.",
+    text: "Jonge kinderen groeien op in een digitale omgeving waarin smartphones, social media en games een groot deel van hun dagelijks leven bepalen. Door functies zoals algoritmes, autoplay en eindeloze feeds blijven zij vaak langer online dan gepland. Tegelijkertijd hebben kinderen van 9–13 jaar nog weinig kennis over hoe hun online gedrag hun welzijn beïnvloedt, hoe zij hun schermtijd kunnen reguleren, en hoe ze zichzelf online kunnen beschermen. Dit maakt het moeilijk voor hen om een gezonde balans te vinden tussen online activiteiten en offline bezigheden zoals spelen, sporten, sociale interactie en schooltaken, terwijl zij zich veilig en beschermd voelen in de digitale wereld.",
     imagePosition: "right" as const,
     image: img1,
   },
@@ -21,47 +21,41 @@ const timelineItems = [
   },
   {
     title: "De gewenste situatie",
-    text: "Jonge kinderen hebben meer inzicht in hun online gedrag en begrijpen beter hoe digitale media hun aandacht en tijd beïnvloeden. Zij ontwikkelen vaardigheden om bewuste keuzes te maken rondom schermgebruik en leren momenten te herkennen waarop zij online of juist offline willen zijn. Hierdoor ervaren zij meer grip op hun schermtijd en ontstaat er een gezondere balans tussen online activiteiten en offline bezigheden zoals spelen, sporten, sociale interactie en school, wat bijdraagt aan hun welzijn.",
+  text: "Kinderen hebben meer inzicht in hun online gedrag en begrijpen beter hoe digitale media hun aandacht en tijd beïnvloeden. Zij beschikken over vaardigheden om bewuste keuzes te maken rondom schermgebruik en herkennen momenten waarop zij online of juist offline willen zijn. Tegelijkertijd voelen zij zich veiliger in de digitale omgeving, doordat zij beter kunnen omgaan met online risico’s zoals pesten, misinformatie en ongewenste berichten.\n\nDoor actieve begeleiding en ondersteuning leren kinderen veilig, gezond en bewust om te gaan met digitale media. Dit leidt tot meer controle op hun schermtijd en een evenwichtige balans tussen online activiteiten en offline bezigheden zoals spelen, sporten, sociale interactie en school, wat bijdraagt aan hun welzijn.",
     imagePosition: "right" as const,
     image: img3,
   },
 ];
 
 const categories = [
-  "Schermtijd",
   "Welzijn",
-  "Social media",
-  "Privacy & veiligheid",
-  "Offline gedrag",
-  "Online gedrag",
   "Bescherming",
-  "Externe factoren",
 ];
 
 const statementCards = [
-  {
-    category: "Schermtijd",
-    title:
-      "Schermgebruik neemt een groot deel van het dagelijks leven van jongeren in",
-    toelichting:
-      "Jongeren besteden een aanzienlijk deel van hun dag aan digitale media. Gemiddeld zitten jongeren 4,8 uur per dag op hun smartphone, wat bij 15–21-jarigen oploopt tot 5,5 uur. Daarnaast besteden zij nog ongeveer 3 uur per dag aan online video en televisietijd, zoals YouTube of streamingdiensten. Hierdoor neemt schermgebruik een groot deel van hun vrije tijd in; bij 18-jarigen wordt zelfs geschat dat ongeveer 93% van hun vrije tijd aan schermen wordt besteed, wat laat zien hoe dominant digitale technologie is in het dagelijks leven van jongeren.",
-    bronnen: [
-      "Mediahuis Nederland & Wayne Parker Kent, 2023;",
-      "Marketingfacts, 2023;",
-      "Smart & Social – Hogeschool Rotterdam, 2024",
-    ],
-  },
-  {
-    category: "Schermtijd",
-    title:
-      "Platformontwerp en dagelijkse routines stimuleren langdurig schermgebruik",
-    toelichting:
-      "Digitale platformen zijn ontworpen met functies zoals eindeloze feeds, gepersonaliseerde aanbevelingen en algoritmes, waardoor \"even kijken\" voor jongeren vaak uitloopt op langdurig gebruik. Tegelijkertijd hebben jongeren duidelijke dagelijkse piekmomenten in hun online gebruik: 's ochtends, direct na school (15:00–18:00) en 's avonds laat in bed. Op deze momenten grijpen jongeren automatisch naar hun telefoon om video's te kijken, te gamen of te chatten. Deze vaste gebruikspatronen maken het moeilijk om schermgebruik te onderbreken, maar bieden ook kansrijke momenten voor interventies die bewustwording en digitale balans bevorderen.",
-    bronnen: [
-      "Mediahuis Nederland & Wayne Parker Kent, 2023;",
-      "Smart & Social – Hogeschool Rotterdam, 2024",
-    ],
-  },
+  // {
+  //   category: "Schermtijd",
+  //   title:
+  //     "Schermgebruik neemt een groot deel van het dagelijks leven van jongeren in",
+  //   toelichting:
+  //     "Jongeren besteden een aanzienlijk deel van hun dag aan digitale media. Gemiddeld zitten jongeren 4,8 uur per dag op hun smartphone, wat bij 15–21-jarigen oploopt tot 5,5 uur. Daarnaast besteden zij nog ongeveer 3 uur per dag aan online video en televisietijd, zoals YouTube of streamingdiensten. Hierdoor neemt schermgebruik een groot deel van hun vrije tijd in; bij 18-jarigen wordt zelfs geschat dat ongeveer 93% van hun vrije tijd aan schermen wordt besteed, wat laat zien hoe dominant digitale technologie is in het dagelijks leven van jongeren.",
+  //   bronnen: [
+  //     "Mediahuis Nederland & Wayne Parker Kent, 2023;",
+  //     "Marketingfacts, 2023;",
+  //     "Smart & Social – Hogeschool Rotterdam, 2024",
+  //   ],
+  // },
+  // {
+  //   category: "Schermtijd",
+  //   title:
+  //     "Platformontwerp en dagelijkse routines stimuleren langdurig schermgebruik",
+  //   toelichting:
+  //     "Digitale platformen zijn ontworpen met functies zoals eindeloze feeds, gepersonaliseerde aanbevelingen en algoritmes, waardoor \"even kijken\" voor jongeren vaak uitloopt op langdurig gebruik. Tegelijkertijd hebben jongeren duidelijke dagelijkse piekmomenten in hun online gebruik: 's ochtends, direct na school (15:00–18:00) en 's avonds laat in bed. Op deze momenten grijpen jongeren automatisch naar hun telefoon om video's te kijken, te gamen of te chatten. Deze vaste gebruikspatronen maken het moeilijk om schermgebruik te onderbreken, maar bieden ook kansrijke momenten voor interventies die bewustwording en digitale balans bevorderen.",
+  //   bronnen: [
+  //     "Mediahuis Nederland & Wayne Parker Kent, 2023;",
+  //     "Smart & Social – Hogeschool Rotterdam, 2024",
+  //   ],
+  // },
   // Welzijn
   {
     category: "Welzijn",
@@ -87,92 +81,120 @@ const statementCards = [
       "Goodybag RBTL – Digital Wellbeing for Teens: Designing Educational Systems",
     ],
   },
-  // Social media
   {
-    category: "Social media",
+    category: "Welzijn",
     title:
-      "Sociale media bieden jongeren zowel verbinding als stress en beïnvloeden hun welzijn op verschillende manieren",
+      "Intensief schermgebruik, versterkt door platformdesign, maakt het voor jongeren moeilijk om een gezonde balans te behouden",
     toelichting:
-      "Sociale media spelen een grote rol in het dagelijks leven van jongeren (88% van de 10–18-jarigen gebruikt het dagelijks), maar de impact op hun welzijn is ambivalent. Jongeren ervaren sociale media als leuk en verbindend (contact met vrienden, afleiding, zelfexpressie en het ontwikkelen van interesses), maar ook als vermoeiend en stressvol door sociale vergelijking en druk rondom uiterlijk of prestaties. De effecten verschillen bovendien per gebruik en per groep: actief gebruik (zoals chatten of reageren) wordt vaker positief ervaren en kan vriendschappen en zelfvertrouwen versterken, terwijl passief gebruik (zoals eindeloos scrollen) vaker samenhangt met negatieve gevoelens. Meisjes rapporteren daarnaast vaker een negatieve invloed op hun welzijn dan jongens, terwijl jongens vaker druk ervaren rondom presteren, gamen of intensief mediagebruik.",
+      "Jongeren besteden een groot deel van hun dag aan digitale media, met gemiddeld 4,8 tot 5,5 uur per dag op hun smartphone en daarnaast nog uren aan online video en streaming. Dit intensieve gebruik wordt versterkt door platformontwerpen zoals eindeloze feeds, algoritmes en gepersonaliseerde content, waardoor 'even kijken' vaak uitloopt op langdurig gebruik. Deze combinatie maakt het voor jongeren lastig om hun schermtijd te reguleren en een gezonde balans te behouden, wat kan leiden tot negatieve effecten op hun welzijn zoals stress, vermoeidheid, slaapproblemen en verminderde concentratie.",
     bronnen: [
-      "Youngwork, 2024",
-      "Trimbos Instituut, 2023",
-      "UNICEF Nederland, 2024, 2025",
-      "Nederlands Jeugdinstituut, 2023",
-      "Smart & Social – Hogeschool Rotterdam, 2024",
-    ],
-  },
-  {
-    category: "Social media",
-    title:
-      "Het ontwerp van sociale mediaplatforms stimuleert langdurig gebruik en beïnvloedt hoe jongeren content ervaren",
-    toelichting:
-      "Sociale mediaplatforms zijn ontworpen om jongeren zo lang mogelijk online te houden via algoritmes, likes, streaks, notificaties en eindeloze scrolles die inspelen op het beloningssysteem van het tienerbrein. Dit kan verslavingsachtig gebruik versterken. Tegelijkertijd bepaalt de manier waarop content wordt aangeboden sterk of jongeren zich aangesproken voelen: korte, snelle en authentieke content met humor en herkenbare situaties werkt beter dan belerende of geforceerde boodschappen.",
-    bronnen: [
-      "Nederlands Jeugdinstituut, 2023",
-      "Netwerk Mediawijsheid, 2025",
-      'Goodybag RBTL – Campagneplan "Unfollow the hype" (Groep 4)',
-    ],
-  },
-  // Privacy & veiligheid
-  {
-    category: "Privacy & veiligheid",
-    title:
-      "Jongeren ervaren dat hun privacy en veiligheid online onvoldoende worden beschermd",
-    toelichting:
-      "Veel jongeren ervaren dat hun privacy en veiligheid online onvoldoende worden beschermd. In onderzoek geven jongeren privacy een score van 5,5 en online veiligheid een 5,7, terwijl 80% privacy en 79% online veiligheid als belangrijke digitale rechten beschouwt. Jongeren willen meer controle over hun persoonlijke gegevens en betere bescherming tegen online risico's zoals pesten, manipulatie en misbruik. Daarnaast vinden zij dat hun stem vaker moet worden meegenomen bij beleid en technologieontwikkeling, zodat digitale platforms beter aansluiten bij hun behoeften en veiligheid.",
-    bronnen: ["Digital Child Rights, 2024"],
-  },
-  {
-    category: "Privacy & veiligheid",
-    title:
-      "Gebrek aan digitale kennis en platformdesign vergroten online risico's voor jongeren",
-    toelichting:
-      "Jongeren met minder kennis over privacy-instellingen, dataveiligheid en nepnieuws lopen aantoonbaar meer risico op online schade. Tegelijkertijd versterken commerciële verdienmodellen van digitale platforms dit probleem: deze platforms zijn ontworpen om gebruikers zo lang mogelijk online te houden, waardoor belangen zoals privacy en bescherming van kinderen onder druk kunnen komen te staan.",
-    bronnen: ["EU Kids Online, 2020", "UNICEF Nederland, 2024"],
-  },
-  // Offline gedrag
-  {
-    category: "Offline gedrag",
-    title:
-      "Schermtijd verdringt offline activiteiten en beïnvloedt de fysieke en sociale ontwikkeling van jongeren",
-    toelichting:
-      "De tijd die jongeren aan schermen besteden gaat vaak ten koste van fysieke activiteiten, buitenspelen en face-to-face sociale interactie. Dit heeft gevolgen voor hun fysieke gezondheid en sociale ontwikkeling. Jongeren die meer dan 4 uur per dag achter een scherm zitten, bewegen significant minder en hebben vaker last van slaapproblemen.",
-    bronnen: ["Mulier Instituut, 2023", "RIVM, 2024"],
-  },
-  {
-    category: "Offline gedrag",
-    title:
-      "Bewust offline tijd inplannen helpt jongeren een gezondere balans te vinden",
-    toelichting:
-      "Jongeren die bewust momenten kiezen om offline te zijn, ervaren meer rust en betere concentratie. Het stimuleren van offline activiteiten zoals sporten, creatieve hobby's en sociale contacten draagt bij aan een gezondere digitale balans en algeheel welzijn.",
-    bronnen: ["NJi, 2024", "Trimbos-instituut, 2024"],
-  },
-  // Online gedrag
-  {
-    category: "Online gedrag",
-    title:
-      "Jongeren gebruiken hun smartphone continu om hun identiteit en sociale positie te verkennen",
-    toelichting:
-      "Jongeren zijn vrijwel continu online en gebruiken hun smartphone als vanzelfsprekend onderdeel van hun dagelijks leven. Via sociale media, gaming en video's verkennen ze hun identiteit, uiterlijk en sociale rollen en leren ze hoe ze zich presenteren en reageren binnen sociale groepen.",
-    bronnen: [
-      "EU Kids Online, 2020",
       "Mediahuis Nederland & Wayne Parker Kent, 2023",
-      "UNICEF Nederland, 2025",
-    ],
-  },
-  {
-    category: "Online gedrag",
+      "Marketingfacts, 2023",
+      "Smart & Social – Hogeschool Rotterdam, 2024"
+  ],
+},
+{
+    category: "Welzijn",
     title:
-      "Jongeren proberen bewust een balans te vinden tussen online participatie en hun offline leven",
+      "Sociale normen en constante online aanwezigheid leggen druk op jongeren en beïnvloeden hun welzijn",
     toelichting:
-      "Online participatie kan jongeren vaardigheden, empowerment en zelfreflectie laten ontwikkelen die ook offline gedrag beïnvloeden. Tegelijkertijd kan intensief schermgebruik ten koste gaan van offline activiteiten zoals huiswerk, familiecontact en sociale afspraken, waardoor jongeren bewust proberen balans te vinden tussen online en offline leven.",
+      "Door eigen smartphones en constante internettoegang zijn jongeren vrijwel continu online. In deze omgeving bepalen sociale media, influencers en groepsdruk sterk wat als 'normaal' gedrag wordt gezien — van welke apps je gebruikt tot wat je post. Deze sociale druk kan leiden tot onzekerheid, vergelijking met anderen en de behoefte om voortdurend online aanwezig te zijn. Vooral jongeren die sterk gericht zijn op sociale relaties zijn hier gevoelig voor, wat invloed kan hebben op hun zelfbeeld, stressniveau en algehele welzijn.",
     bronnen: [
-      "Ruigrok, 2025",
-      "Aydogan et al., 2024",
-      "Kim, Russo & Amnå, z.j.",
+      "Netwerk Mediawijsheid, 2025",
+      "Consumentenbond, 2025",
+      "Goodybag RBTL – Online thema's",
+      "EU Kids Online, 2020",
+      "Marketingfacts, 2023",
+      "UNICEF Nederland, 2025",
+      'Goodybag RBTL – Campagneplan "Echte vrienden pushen niet"',
     ],
   },
+  // Social media
+  // {
+  //   category: "Social media",
+  //   title:
+  //     "Sociale media bieden jongeren zowel verbinding als stress en beïnvloeden hun welzijn op verschillende manieren",
+  //   toelichting:
+  //     "Sociale media spelen een grote rol in het dagelijks leven van jongeren (88% van de 10–18-jarigen gebruikt het dagelijks), maar de impact op hun welzijn is ambivalent. Jongeren ervaren sociale media als leuk en verbindend (contact met vrienden, afleiding, zelfexpressie en het ontwikkelen van interesses), maar ook als vermoeiend en stressvol door sociale vergelijking en druk rondom uiterlijk of prestaties. De effecten verschillen bovendien per gebruik en per groep: actief gebruik (zoals chatten of reageren) wordt vaker positief ervaren en kan vriendschappen en zelfvertrouwen versterken, terwijl passief gebruik (zoals eindeloos scrollen) vaker samenhangt met negatieve gevoelens. Meisjes rapporteren daarnaast vaker een negatieve invloed op hun welzijn dan jongens, terwijl jongens vaker druk ervaren rondom presteren, gamen of intensief mediagebruik.",
+  //   bronnen: [
+  //     "Youngwork, 2024",
+  //     "Trimbos Instituut, 2023",
+  //     "UNICEF Nederland, 2024, 2025",
+  //     "Nederlands Jeugdinstituut, 2023",
+  //     "Smart & Social – Hogeschool Rotterdam, 2024",
+  //   ],
+  // },
+  // {
+  //   category: "Social media",
+  //   title:
+  //     "Het ontwerp van sociale mediaplatforms stimuleert langdurig gebruik en beïnvloedt hoe jongeren content ervaren",
+  //   toelichting:
+  //     "Sociale mediaplatforms zijn ontworpen om jongeren zo lang mogelijk online te houden via algoritmes, likes, streaks, notificaties en eindeloze scrolles die inspelen op het beloningssysteem van het tienerbrein. Dit kan verslavingsachtig gebruik versterken. Tegelijkertijd bepaalt de manier waarop content wordt aangeboden sterk of jongeren zich aangesproken voelen: korte, snelle en authentieke content met humor en herkenbare situaties werkt beter dan belerende of geforceerde boodschappen.",
+  //   bronnen: [
+  //     "Nederlands Jeugdinstituut, 2023",
+  //     "Netwerk Mediawijsheid, 2025",
+  //     'Goodybag RBTL – Campagneplan "Unfollow the hype" (Groep 4)',
+  //   ],
+  // },
+  // // Privacy & veiligheid
+  // {
+  //   category: "Privacy & veiligheid",
+  //   title:
+  //     "Jongeren ervaren dat hun privacy en veiligheid online onvoldoende worden beschermd",
+  //   toelichting:
+  //     "Veel jongeren ervaren dat hun privacy en veiligheid online onvoldoende worden beschermd. In onderzoek geven jongeren privacy een score van 5,5 en online veiligheid een 5,7, terwijl 80% privacy en 79% online veiligheid als belangrijke digitale rechten beschouwt. Jongeren willen meer controle over hun persoonlijke gegevens en betere bescherming tegen online risico's zoals pesten, manipulatie en misbruik. Daarnaast vinden zij dat hun stem vaker moet worden meegenomen bij beleid en technologieontwikkeling, zodat digitale platforms beter aansluiten bij hun behoeften en veiligheid.",
+  //   bronnen: ["Digital Child Rights, 2024"],
+  // },
+  // {
+  //   category: "Privacy & veiligheid",
+  //   title:
+  //     "Gebrek aan digitale kennis en platformdesign vergroten online risico's voor jongeren",
+  //   toelichting:
+  //     "Jongeren met minder kennis over privacy-instellingen, dataveiligheid en nepnieuws lopen aantoonbaar meer risico op online schade. Tegelijkertijd versterken commerciële verdienmodellen van digitale platforms dit probleem: deze platforms zijn ontworpen om gebruikers zo lang mogelijk online te houden, waardoor belangen zoals privacy en bescherming van kinderen onder druk kunnen komen te staan.",
+  //   bronnen: ["EU Kids Online, 2020", "UNICEF Nederland, 2024"],
+  // },
+  // Offline gedrag
+  // {
+  //   category: "Offline gedrag",
+  //   title:
+  //     "Schermtijd verdringt offline activiteiten en beïnvloedt de fysieke en sociale ontwikkeling van jongeren",
+  //   toelichting:
+  //     "De tijd die jongeren aan schermen besteden gaat vaak ten koste van fysieke activiteiten, buitenspelen en face-to-face sociale interactie. Dit heeft gevolgen voor hun fysieke gezondheid en sociale ontwikkeling. Jongeren die meer dan 4 uur per dag achter een scherm zitten, bewegen significant minder en hebben vaker last van slaapproblemen.",
+  //   bronnen: ["Mulier Instituut, 2023", "RIVM, 2024"],
+  // },
+  // {
+  //   category: "Offline gedrag",
+  //   title:
+  //     "Bewust offline tijd inplannen helpt jongeren een gezondere balans te vinden",
+  //   toelichting:
+  //     "Jongeren die bewust momenten kiezen om offline te zijn, ervaren meer rust en betere concentratie. Het stimuleren van offline activiteiten zoals sporten, creatieve hobby's en sociale contacten draagt bij aan een gezondere digitale balans en algeheel welzijn.",
+  //   bronnen: ["NJi, 2024", "Trimbos-instituut, 2024"],
+  // },
+  // // Online gedrag
+  // {
+  //   category: "Online gedrag",
+  //   title:
+  //     "Jongeren gebruiken hun smartphone continu om hun identiteit en sociale positie te verkennen",
+  //   toelichting:
+  //     "Jongeren zijn vrijwel continu online en gebruiken hun smartphone als vanzelfsprekend onderdeel van hun dagelijks leven. Via sociale media, gaming en video's verkennen ze hun identiteit, uiterlijk en sociale rollen en leren ze hoe ze zich presenteren en reageren binnen sociale groepen.",
+  //   bronnen: [
+  //     "EU Kids Online, 2020",
+  //     "Mediahuis Nederland & Wayne Parker Kent, 2023",
+  //     "UNICEF Nederland, 2025",
+  //   ],
+  // },
+  // {
+  //   category: "Online gedrag",
+  //   title:
+  //     "Jongeren proberen bewust een balans te vinden tussen online participatie en hun offline leven",
+  //   toelichting:
+  //     "Online participatie kan jongeren vaardigheden, empowerment en zelfreflectie laten ontwikkelen die ook offline gedrag beïnvloeden. Tegelijkertijd kan intensief schermgebruik ten koste gaan van offline activiteiten zoals huiswerk, familiecontact en sociale afspraken, waardoor jongeren bewust proberen balans te vinden tussen online en offline leven.",
+  //   bronnen: [
+  //     "Ruigrok, 2025",
+  //     "Aydogan et al., 2024",
+  //     "Kim, Russo & Amnå, z.j.",
+  //   ],
+  // },
   // Bescherming
   {
     category: "Bescherming",
@@ -193,42 +215,70 @@ const statementCards = [
       "Betrokken ouderlijk toezicht kan de negatieve effecten van online gedrag en schermtijd op gezondheid en welzijn van jongeren beperken. Ouderlijk toezicht speelt een modererende rol in het digitale gedrag van jongeren. Actieve monitoring door ouders kan de gezondheidsrisico's van schermtijd verminderen, bijvoorbeeld door negatieve effecten op fysieke activiteit en fitness te beperken. In een online omgeving waar jongeren regelmatig te maken krijgen met sociale druk en risico's, kan ouderlijke begeleiding bijdragen aan gezonder en bewuster mediagebruik.",
     bronnen: ["Hao & Cui, 2025"],
   },
-  // Externe factoren
   {
-    category: "Externe factoren",
+    category: "Bescherming",
     title:
-      "Constante online aanwezigheid en sociale normen beïnvloeden het gedrag en welzijn van jongeren",
+      "Het ontwerp van sociale mediaplatforms stuurt het gedrag van jongeren en maakt het moeilijk om grenzen te stellen",
     toelichting:
-      "Door eigen smartphones en constante internettoegang zijn jongeren vrijwel permanent online. In deze omgeving bepalen sociale media, influencers en groepsdruk sterk wat als 'normaal' gedrag wordt gezien — van welke apps je gebruikt tot wat je post. Vooral jongeren van 15–18 jaar, die sterk gericht zijn op vriendschappen, zijn gevoelig voor deze sociale druk, wat hun keuzes en welzijn kan beïnvloeden.",
+      "Sociale mediaplatforms zijn ontworpen om jongeren zo lang mogelijk online te houden via algoritmes, likes, streaks, notificaties en eindeloze scrolles die inspelen op het beloningssysteem van het tienerbrein. Hierdoor worden jongeren continu gestimuleerd om online te blijven, vaak zonder dat zij zich bewust zijn van deze invloed. Dit maakt het moeilijk om zelf grenzen te stellen en vergroot het risico op overmatig gebruik en afhankelijkheid. Jongeren zijn hierdoor minder goed beschermd tegen de invloed van deze digitale systemen.",
     bronnen: [
+      "Nederlands Jeugdinstituut, 2023",
       "Netwerk Mediawijsheid, 2025",
-      "Consumentenbond, 2025",
-      "Goodybag RBTL – Online thema's",
-      "EU Kids Online, 2020",
-      "Marketingfacts, 2023",
-      "UNICEF Nederland, 2025",
-      'Goodybag RBTL – Campagneplan "Echte vrienden pushen niet"',
+      'Goodybag RBTL – Campagneplan "Unfollow the hype" (Groep 4)',
     ],
   },
   {
-    category: "Externe factoren",
+    category: "Bescherming",
     title:
-      "Mediawijsheid groeit wanneer jongeren, ouders en scholen samen werken aan kritisch en bewust mediagebruik",
+      "Jongeren ervaren onvoldoende bescherming van hun privacy en veiligheid in de online omgeving",
     toelichting:
-      "Jongeren hebben ondersteuning nodig om online content kritisch te beoordelen, risico's te herkennen en bewuste keuzes te maken. Ouders en scholen spelen hierin een sleutelrol, waarbij open gesprek en gezamenlijke afspraken effectiever zijn dan alleen controle of alleen vrijheid. Wanneer jongeren, ouders en scholen samenwerken, ontstaat de grootste kans op duurzame mediawijsheid.",
-    bronnen: [
-      "Goodybag RBTL – Online thema's",
-      "Zyad, 2021",
-      "LSE / EU Kids Online, z.d.",
-      "UNICEF Nederland, 2024",
-      "EU Kids Online, 2020",
-      "UNICEF Nederland, 2025",
-    ],
+      "Veel jongeren ervaren dat hun privacy en veiligheid online onvoldoende worden beschermd. In onderzoek geven jongeren privacy een score van 5,5 en online veiligheid een 5,7, terwijl 80% privacy en 79% online veiligheid als belangrijke digitale rechten beschouwt. Jongeren willen meer controle over hun persoonlijke gegevens en betere bescherming tegen online risico's zoals pesten, manipulatie en misbruik. Daarnaast geven zij aan dat hun stem vaker moet worden meegenomen bij beleid en technologieontwikkeling, zodat digitale platforms beter aansluiten bij hun behoeften en veiligheid.",
+    bronnen: ["Digital Child Rights, 2024"],
   },
+  {
+    category: "Bescherming",
+    title:
+      "Gebrek aan digitale kennis en platformdesign vergroten online risico's voor jongeren",
+    toelichting:
+      "Jongeren met minder kennis over privacy-instellingen, dataveiligheid en nepnieuws lopen aantoonbaar meer risico op online schade. Tegelijkertijd versterken commerciële verdienmodellen van digitale platforms dit probleem: deze platforms zijn ontworpen om gebruikers zo lang mogelijk online te houden, waardoor belangen zoals privacy en bescherming van kinderen onder druk kunnen komen te staan.",
+    bronnen: ["EU Kids Online, 2020", "UNICEF Nederland, 2024"],
+  },
+  // Externe factoren
+  // {
+  //   category: "Externe factoren",
+  //   title:
+  //     "Constante online aanwezigheid en sociale normen beïnvloeden het gedrag en welzijn van jongeren",
+  //   toelichting:
+  //     "Door eigen smartphones en constante internettoegang zijn jongeren vrijwel permanent online. In deze omgeving bepalen sociale media, influencers en groepsdruk sterk wat als 'normaal' gedrag wordt gezien — van welke apps je gebruikt tot wat je post. Vooral jongeren van 15–18 jaar, die sterk gericht zijn op vriendschappen, zijn gevoelig voor deze sociale druk, wat hun keuzes en welzijn kan beïnvloeden.",
+  //   bronnen: [
+  //     "Netwerk Mediawijsheid, 2025",
+  //     "Consumentenbond, 2025",
+  //     "Goodybag RBTL – Online thema's",
+  //     "EU Kids Online, 2020",
+  //     "Marketingfacts, 2023",
+  //     "UNICEF Nederland, 2025",
+  //     'Goodybag RBTL – Campagneplan "Echte vrienden pushen niet"',
+  //   ],
+  // },
+  // {
+  //   category: "Externe factoren",
+  //   title:
+  //     "Mediawijsheid groeit wanneer jongeren, ouders en scholen samen werken aan kritisch en bewust mediagebruik",
+  //   toelichting:
+  //     "Jongeren hebben ondersteuning nodig om online content kritisch te beoordelen, risico's te herkennen en bewuste keuzes te maken. Ouders en scholen spelen hierin een sleutelrol, waarbij open gesprek en gezamenlijke afspraken effectiever zijn dan alleen controle of alleen vrijheid. Wanneer jongeren, ouders en scholen samenwerken, ontstaat de grootste kans op duurzame mediawijsheid.",
+  //   bronnen: [
+  //     "Goodybag RBTL – Online thema's",
+  //     "Zyad, 2021",
+  //     "LSE / EU Kids Online, z.d.",
+  //     "UNICEF Nederland, 2024",
+  //     "EU Kids Online, 2020",
+  //     "UNICEF Nederland, 2025",
+  //   ],
+  // },
 ];
 
 const SprintOneSection = () => {
-  const [activeCategory, setActiveCategory] = useState("Schermtijd");
+  const [activeCategory, setActiveCategory] = useState("Welzijn");
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const filteredCards = statementCards.filter(
@@ -292,9 +342,9 @@ const SprintOneSection = () => {
                     {item.title}
                   </h3>
                   <div className="bg-[#292122] text-white border border-primary-foreground/20 rounded-lg p-5">
-                    <p className="text-sm leading-relaxed text-primary-foreground/80">
-                      {item.text}
-                    </p>
+                  <p className="text-sm leading-relaxed text-primary-foreground/80 whitespace-pre-line">
+                    {item.text}
+                  </p>
                   </div>
                 </div>
 
