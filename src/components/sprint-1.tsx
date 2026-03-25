@@ -309,7 +309,7 @@ const SprintOneSection = () => {
         {/* Intro */}
         <p className="text-center text-primary-foreground/80 max-w-2xl mx-auto mb-20 leading-relaxed">
           In deze sprint hebben we onze doelgroep verder gespecificeerd. Tijdens
-          het onderzoek naar jongeren groeide onze interesse om meer preventief te werken met specafiek
+          het onderzoek naar jongeren groeide onze interesse om meer preventief te werken met specifiek
           kinderen. Op basis van verschillende onderzoeken hebben we een nieuwe
           formulering gemaakt van de huidige situatie, de gewenste situatie en
           ontwerpvraag. De belangrijkste inzichten uit dit onderzoek zijn
