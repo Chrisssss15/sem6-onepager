@@ -5,6 +5,7 @@ import AboutUsSection from "./components/aboutUs";
 import TeamValuesSection from "./components/teamValues";
 import Sprint0Section from "./components/sprint-0";
 import Sprint1Section from "./components/sprint-1";
+import Sprint2Section from "./components/sprint-2";
 import Footer from "./components/footer";
 
 function App() {
@@ -37,7 +38,10 @@ function App() {
           <Sprint1Section />
         </section>
 
-        {/* Footer gewoon normaal */}
+        <section className="min-h-screen">
+          <Sprint2Section />
+        </section>
+
         <footer className="min-h-[40vh]">
           <Footer />
         </footer>
