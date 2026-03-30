@@ -96,7 +96,7 @@ const prototypeImages = [
 
 
   return (
-    <section className="py-20 px-4 bg-[#FFFDEB]">
+    <section id="sprint-2" className="py-20 px-4 bg-[#FFFDEB]">
       <div className="max-w-5xl mx-auto">
         {/* Title */}
         <h2 className="text-5xl md:text-7xl font-serif italic text-center text-foreground mb-8">
