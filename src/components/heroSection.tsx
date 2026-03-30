@@ -5,7 +5,7 @@ const HeroSection = () => {
   // DE TEKSTEN DIE GETYPT MOETEN WORDEN
   const text1 =
     "Wij zijn een multidisciplinair team dat onderzoekt hoe jongeren bewuster online kunnen zijn en een gezondere online-offline balans kunnen vinden.";
-  const text2 = "Sprint 1 is live, ontdek onze eerste inzichten! 🚀";
+  const text2 = "Sprint 2 is live, ontdek onze eerste inzichten! 🚀";
 
   const [displayedText1, setDisplayedText1] = useState("");
   const [displayedText2, setDisplayedText2] = useState("");
