@@ -330,6 +330,7 @@ const prevPrototype = () => {
           /> */}
         <img
         src={personaSlides[personaSlider.index]}
+        onClick={() => setActiveImage(personaSlides[personaSlider.index])}
         className={`
             w-full max-w-[500px] mx-auto rounded-lg
             transition-opacity duration-200
@@ -427,6 +428,7 @@ const prevPrototype = () => {
             {/* image */}
             <img
             src={prototypeImages[prototypeSlider.index]}
+            onClick={() => setActiveImage(prototypeImages[prototypeSlider.index])}
             className={`
                 h-[50vh] rounded-[2rem]
                 transition-opacity duration-200
