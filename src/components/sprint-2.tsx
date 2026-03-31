@@ -157,6 +157,9 @@ const SprintTwoSection = () => {
 
   const [activeTopicIndex, setActiveTopicIndex] = useState(0);
 
+    const [fadePersona, setFadePersona] = useState(false);
+    const [fadePrototype, setFadePrototype] = useState(false);
+
   const personaSlides = [
     UserPersona1,
     UserPersona2,
@@ -164,6 +167,21 @@ const SprintTwoSection = () => {
     UserPersona4,
   ];
 
+const nextPersona = () => {
+  setFadePersona(true);
+  setTimeout(() => {
+    personaSlider.next();
+    setFadePersona(false);
+  }, 150);
+};
+
+const prevPersona = () => {
+  setFadePersona(true);
+  setTimeout(() => {
+    personaSlider.prev();
+    setFadePersona(false);
+  }, 150);
+};
   const prototypeImages = [
     prototypeDisplay,
     prototype1,
@@ -173,6 +191,21 @@ const SprintTwoSection = () => {
     prototype5,
     prototype6,
   ];
+  const nextPrototype = () => {
+  setFadePrototype(true);
+  setTimeout(() => {
+    prototypeSlider.next();
+    setFadePrototype(false);
+  }, 150);
+};
+
+const prevPrototype = () => {
+  setFadePrototype(true);
+  setTimeout(() => {
+    prototypeSlider.prev();
+    setFadePrototype(false);
+  }, 150);
+};
 
   // 🔥 sliders
   const personaSlider = useSlider(personaSlides.length);
@@ -208,8 +241,7 @@ const SprintTwoSection = () => {
             className="w-full rounded-md cursor-zoom-in"
           />
 
-            <p className="max-w-[615px] font-sans text-[13px] md:text-[18px] leading-[26px] md:leading-[39px] text-black">
-
+          <p className="max-w-[615px] font-sans text-[13px] md:text-[18px] leading-[26px] md:leading-[39px] text-black">
             Tijdens een creatieve teamsessie hebben we de Crazy 8-methode
             gebruikt om snel veel ideeën te genereren. Door samen te stemmen en
             elkaar te inspireren, ontdekten we dat competitie (leaderboards),
@@ -238,19 +270,19 @@ const SprintTwoSection = () => {
         <div className="flex flex-wrap justify-center gap-3 mb-10">
           {interviewTopics.map((label, index) => (
             <button
-                key={label.label}
-                onClick={() => setActiveTopicIndex(index)}
-                className={` px-6 md:px-8 py-3 md:py-4 rounded-[16px] flex items-center justify-center border border-black/70 text-[15px] md:text-[16px] font-medium whitespace-nowrap transition-all duration-200
+              key={label.label}
+              onClick={() => setActiveTopicIndex(index)}
+              className={` px-6 md:px-8 py-3 md:py-4 rounded-[16px] flex items-center justify-center border border-black/70 text-[15px] md:text-[16px] font-medium whitespace-nowrap transition-all duration-200
                     ${
-                        activeTopicIndex === index
+                      activeTopicIndex === index
                         ? "bg-black text-white/90 shadow-sm"
                         : "bg-transparent text-black/80 hover:bg-black/5"
                     }
                 `}
             >
-                {label.label}
+              {label.label}
             </button>
-            ))}
+          ))}
         </div>
 
         {/* Card */}
@@ -280,7 +312,13 @@ const SprintTwoSection = () => {
         </h3>
 
         <p className=" max-w-[800px] mx-auto text-center font-sans text-[15px] md:text-[17px] lg:text-[18px] leading-[26px] md:leading-[28px] lg:leading-[30px] text-black/70 mb-6">
-            We hebben zowel een user persona als meerdere non-human persona’s ontwikkeld. De user persona geeft inzicht in het gedrag, de behoeften en uitdagingen van de doelgroep. De non-human persona’s (zoals de smartphone, social media en offline leven) helpen ons om ook de invloed van de omgeving en systemen beter te begrijpen. Samen geven ze een compleet beeld van het probleem en vormen ze de basis voor ons ontwerp.
+          We hebben zowel een user persona als meerdere non-human persona’s
+          ontwikkeld. De user persona geeft inzicht in het gedrag, de behoeften
+          en uitdagingen van de doelgroep. De non-human persona’s (zoals de
+          smartphone, social media en offline leven) helpen ons om ook de
+          invloed van de omgeving en systemen beter te begrijpen. Samen geven ze
+          een compleet beeld van het probleem en vormen ze de basis voor ons
+          ontwerp.
         </p>
 
         {/* slider image */}
@@ -290,24 +328,27 @@ const SprintTwoSection = () => {
             alt={`Persona ${personaSlider.index + 1}`}
             className="w-full max-w-[500px] mx-auto rounded-lg"
           /> */}
-          <img
-            src={personaSlides[personaSlider.index]}
-            onClick={() => setActiveImage(personaSlides[personaSlider.index])}
-            className="w-full max-w-[500px] mx-auto rounded-lg cursor-zoom-in"
-          />
+        <img
+        src={personaSlides[personaSlider.index]}
+        className={`
+            w-full max-w-[500px] mx-auto rounded-lg
+            transition-opacity duration-200
+            ${fadePersona ? "opacity-0" : "opacity-100"}
+        `}
+        />
         </div>
 
         {/* arrows */}
         <div className="flex justify-center gap-4 mb-20">
           <button
-            onClick={personaSlider.prev}
+            onClick={prevPersona}
             className="w-12 h-12 rounded-full border flex items-center justify-center hover:bg-black hover:text-white transition"
           >
             ←
           </button>
 
           <button
-            onClick={personaSlider.next}
+            onClick={nextPersona}            
             className="w-12 h-12 rounded-full border flex items-center justify-center hover:bg-black hover:text-white transition"
           >
             →
@@ -368,7 +409,10 @@ const SprintTwoSection = () => {
       <div className="mt-28 md:mt-32 text-center">
         <p className="text-sm uppercase mb-4">Ontwerpvraag</p>
         <blockquote className="max-w-[900px] mx-auto text-center font-serif italic font-normal text-[22px] md:text-[28px] lg:text-[36px] leading-[1.4] text-black/90">
-            ”Hoe kunnen we Rotterdamse kinderen van 9–13 jaar helpen controle te krijgen op hun online gedrag, terwijl ouders hen ondersteunen in het ontwikkelen van een dagelijkse routine met aantrekkelijke offline alternatieven?”
+          ”Hoe kunnen we Rotterdamse kinderen van 9–13 jaar helpen controle te
+          krijgen op hun online gedrag, terwijl ouders hen ondersteunen in het
+          ontwikkelen van een dagelijkse routine met aantrekkelijke offline
+          alternatieven?”
         </blockquote>
       </div>
 
@@ -379,50 +423,47 @@ const SprintTwoSection = () => {
         </h2>
 
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
-            <div className="w-full md:w-1/2 flex flex-col items-center">
-
+          <div className="w-full md:w-1/2 flex flex-col items-center">
             {/* image */}
             <img
-                src={prototypeImages[prototypeSlider.index]}
-                onClick={() => setActiveImage(prototypeImages[prototypeSlider.index])}
-                className="h-[50vh] rounded-[2rem] transition-all duration-300 cursor-zoom-in"
+            src={prototypeImages[prototypeSlider.index]}
+            className={`
+                h-[50vh] rounded-[2rem]
+                transition-opacity duration-200
+                ${fadePrototype ? "opacity-0" : "opacity-100"}
+            `}
             />
 
             {/* arrows */}
             <div className="flex justify-center gap-6 mt-4 md:hidden">
-                <button onClick={prototypeSlider.prev}>
-                ←
-                </button>
-                <button onClick={prototypeSlider.next}>
-                →
-                </button>
+              <button onClick={prevPrototype}>←</button>
+              <button onClick={nextPrototype}>→</button>
             </div>
+          </div>
 
-            </div>
-
-        <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2">
             <p className="max-w-[615px] font-sans text-[15px] md:text-[20px] leading-[28px] md:leading-[41px] text-black">
-                Op basis van de ontwerprichtlijnen hebben we een prototype
-                ontwikkeld om een duidelijker beeld te krijgen van een mogelijk
-                product. Met dit prototype onderzoeken we of de gekozen functies
-                en aannames aansluiten bij onze doelgroep. Bijvoorbeeld: motiveert
-                het vergelijken van prestaties tot minder schermtijd? Werkt
-                competitie direct stimulerend? Motiveert samenwerken sterker dan
-                alleen werken? En draagt gamification meer bij dan geen
-                beloning?{" "}
+              Op basis van de ontwerprichtlijnen hebben we een prototype
+              ontwikkeld om een duidelijker beeld te krijgen van een mogelijk
+              product. Met dit prototype onderzoeken we of de gekozen functies
+              en aannames aansluiten bij onze doelgroep. Bijvoorbeeld: motiveert
+              het vergelijken van prestaties tot minder schermtijd? Werkt
+              competitie direct stimulerend? Motiveert samenwerken sterker dan
+              alleen werken? En draagt gamification meer bij dan geen
+              beloning?{" "}
             </p>
-            </div>    
+          </div>
         </div>
 
         {/* arrows */}
         <div className="hidden md:flex justify-center gap-10 mt-6">
-        <button onClick={prototypeSlider.prev}>
+          <button onClick={prevPrototype}>
             <ChevronLeft className="w-8 h-8" />
-        </button>
+          </button>
 
-        <button onClick={prototypeSlider.next}>
+          <button onClick={nextPrototype}>
             <ChevronRight className="w-8 h-8" />
-        </button>
+          </button>
         </div>
       </div>
 
