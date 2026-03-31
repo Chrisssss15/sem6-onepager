@@ -34,9 +34,9 @@ const TeamValuesSection = () => {
     <section className="min-h-screen flex items-center py-20 bg-[#FFFDEB]">
       <div className="container mx-auto px-6 lg:px-16">
         {/* DE TITEL */}
-        <h2 className="text-5xl md:text-6xl font-serif italic text-center text-foreground mb-12">
+        <h2 className="text-5xl md:text-6xl font-serif italic text-center text-[#292122] mb-12">          
           Teamwaardes
-        </h2>
+          </h2>
 
         {/* HET LIJSTJE - ALLE WAARDES WORDEN GETOOND */}
         <div className="flex flex-col items-center gap-6 max-w-2xl mx-auto">
@@ -44,17 +44,16 @@ const TeamValuesSection = () => {
             // DE KAART: Elk wit blokje met een schaduw
             <div
               key={value.title}
-              className="w-full bg-card bg-[#FFFFFF] rounded-2xl px-8 py-6 shadow-sm flex items-start gap-5"
-            >
+              className="w-full bg-white rounded-2xl px-8 py-6 shadow-sm flex items-start gap-5"            >
               {/* HET ICOONTJE (Emoji) */}
               <span className="text-3xl mt-1 shrink-0">{value.emoji}</span>
 
               {/* DE TEKST: Titel en de uitleg eronder */}
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-1">
+                <h3 className="text-xl font-semibold text-[#292122] mb-1">
                   {value.title}
                 </h3>
-                <p className="text-muted-foreground text-base leading-relaxed">
+                <p className="text-gray-500 text-base leading-relaxed">
                   {value.description}
                 </p>
               </div>
