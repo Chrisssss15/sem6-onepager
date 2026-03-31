@@ -6,7 +6,8 @@ const HeroSection = () => {
   const text1 =
     "Wij zijn een multidisciplinair team dat onderzoekt hoe jongeren bewuster online kunnen zijn en een gezondere online-offline balans kunnen vinden.";
   const boldPart = "Sprint 2 is live";
-  const restPart = ", ontdek onze eerste inzichten! 🚀";
+  // const restPart = ", ontdek onze eerste inzichten! 🚀";
+  const restPart = ", ontdek onze eerste ontwerpkeuzes! 🚀";
   const text2 = boldPart + restPart;
 
   const [displayedText1, setDisplayedText1] = useState("");
@@ -152,14 +153,14 @@ const HeroSection = () => {
                   lineHeight: "1.4",
                 }}
               >
-  <span className="font-bold">
-    {displayedText2.slice(0, boldPart.length)}
-  </span>
-  {displayedText2.slice(boldPart.length)}
+                <span className="font-bold">
+                  {displayedText2.slice(0, boldPart.length)}
+                </span>
+                {displayedText2.slice(boldPart.length)}
 
-  {showSecondChat && displayedText2.length < text2.length && (
-    <span className="animate-pulse border-r-2 border-[#292122] ml-1"></span>
-  )}
+                {showSecondChat && displayedText2.length < text2.length && (
+                  <span className="animate-pulse border-r-2 border-[#292122] ml-1"></span>
+                )}
               </p>
             </div>
           </div>
