@@ -5,7 +5,9 @@ const HeroSection = () => {
   // DE TEKSTEN DIE GETYPT MOETEN WORDEN
   const text1 =
     "Wij zijn een multidisciplinair team dat onderzoekt hoe jongeren bewuster online kunnen zijn en een gezondere online-offline balans kunnen vinden.";
-  const text2 = "Sprint 2 is live, ontdek onze eerste inzichten! 🚀";
+  const boldPart = "Sprint 2 is live";
+  const restPart = ", ontdek onze eerste inzichten! 🚀";
+  const text2 = boldPart + restPart;
 
   const [displayedText1, setDisplayedText1] = useState("");
   const [displayedText2, setDisplayedText2] = useState("");
@@ -111,7 +113,7 @@ const HeroSection = () => {
                 style={{
                   color: "#292122",
                   fontFamily: '"Work Sans", sans-serif',
-                  fontSize: "clamp(18px, 4vw, 25px)",
+                  fontSize: "clamp(18px, 4vw, 22px)",
                   fontWeight: "300",
                   lineHeight: "1.4",
                 }}
@@ -145,15 +147,19 @@ const HeroSection = () => {
                 style={{
                   color: "#292122",
                   fontFamily: '"Work Sans", sans-serif',
-                  fontSize: "clamp(18px, 4vw, 25px)",
-                  fontWeight: "300",
+                  fontSize: "clamp(18px, 4vw, 22px)",
+                  // fontWeight: "300",
                   lineHeight: "1.4",
                 }}
               >
-                {displayedText2}
-                {showSecondChat && displayedText2.length < text2.length && (
-                  <span className="animate-pulse border-r-2 border-[#292122] ml-1"></span>
-                )}
+  <span className="font-bold">
+    {displayedText2.slice(0, boldPart.length)}
+  </span>
+  {displayedText2.slice(boldPart.length)}
+
+  {showSecondChat && displayedText2.length < text2.length && (
+    <span className="animate-pulse border-r-2 border-[#292122] ml-1"></span>
+  )}
               </p>
             </div>
           </div>
