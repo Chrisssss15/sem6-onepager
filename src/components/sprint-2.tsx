@@ -238,17 +238,19 @@ const SprintTwoSection = () => {
         <div className="flex flex-wrap justify-center gap-3 mb-10">
           {interviewTopics.map((label, index) => (
             <button
-              key={label.label}
-              onClick={() => setActiveTopicIndex(index)}
-              className={`px-5 py-2.5 rounded-full border border-black/80 text-[14px] md:text-[15px] font-medium transition-all duration-200 ${
-                activeTopicIndex === index
-                  ? "bg-black text-white border-black"
-                  : "bg-transparent text-black hover:border-black hover:bg-black/5"
-              }`}
+                key={label.label}
+                onClick={() => setActiveTopicIndex(index)}
+                className={` px-6 md:px-8 py-3 md:py-4 rounded-[16px] flex items-center justify-center border border-black/70 text-[15px] md:text-[16px] font-medium whitespace-nowrap transition-all duration-200
+                    ${
+                        activeTopicIndex === index
+                        ? "bg-black text-white/90 shadow-sm"
+                        : "bg-transparent text-black/80 hover:bg-black/5"
+                    }
+                `}
             >
-              {label.label}
+                {label.label}
             </button>
-          ))}
+            ))}
         </div>
 
         {/* Card */}
