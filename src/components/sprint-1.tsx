@@ -21,16 +21,13 @@ const timelineItems = [
   },
   {
     title: "De gewenste situatie",
-  text: "Kinderen hebben meer inzicht in hun online gedrag en begrijpen beter hoe digitale media hun aandacht en tijd beïnvloeden. Zij beschikken over vaardigheden om bewuste keuzes te maken rondom schermgebruik en herkennen momenten waarop zij online of juist offline willen zijn. Tegelijkertijd voelen zij zich veiliger in de digitale omgeving, doordat zij beter kunnen omgaan met online risico’s zoals pesten, misinformatie en ongewenste berichten.\n\nDoor actieve begeleiding en ondersteuning leren kinderen veilig, gezond en bewust om te gaan met digitale media. Dit leidt tot meer controle op hun schermtijd en een evenwichtige balans tussen online activiteiten en offline bezigheden zoals spelen, sporten, sociale interactie en school, wat bijdraagt aan hun welzijn.",
+    text: "Kinderen hebben meer inzicht in hun online gedrag en begrijpen beter hoe digitale media hun aandacht en tijd beïnvloeden. Zij beschikken over vaardigheden om bewuste keuzes te maken rondom schermgebruik en herkennen momenten waarop zij online of juist offline willen zijn. Tegelijkertijd voelen zij zich veiliger in de digitale omgeving, doordat zij beter kunnen omgaan met online risico’s zoals pesten, misinformatie en ongewenste berichten.\n\nDoor actieve begeleiding en ondersteuning leren kinderen veilig, gezond en bewust om te gaan met digitale media. Dit leidt tot meer controle op hun schermtijd en een evenwichtige balans tussen online activiteiten en offline bezigheden zoals spelen, sporten, sociale interactie en school, wat bijdraagt aan hun welzijn.",
     imagePosition: "right" as const,
     image: img3,
   },
 ];
 
-const categories = [
-  "Welzijn",
-  "Bescherming",
-];
+const categories = ["Welzijn", "Bescherming"];
 
 const statementCards = [
   // {
@@ -90,10 +87,10 @@ const statementCards = [
     bronnen: [
       "Mediahuis Nederland & Wayne Parker Kent, 2023",
       "Marketingfacts, 2023",
-      "Smart & Social – Hogeschool Rotterdam, 2024"
-  ],
-},
-{
+      "Smart & Social – Hogeschool Rotterdam, 2024",
+    ],
+  },
+  {
     category: "Welzijn",
     title:
       "Sociale normen en constante online aanwezigheid leggen druk op jongeren en beïnvloeden hun welzijn",
@@ -309,17 +306,17 @@ const SprintOneSection = () => {
         {/* Intro */}
         <p className="text-center text-primary-foreground/80 max-w-2xl mx-auto mb-20 leading-relaxed">
           In deze sprint hebben we onze doelgroep verder gespecificeerd. Tijdens
-          het onderzoek naar jongeren groeide onze interesse om meer preventief te werken met specifiek
-          kinderen. Op basis van verschillende onderzoeken hebben we een nieuwe
-          formulering gemaakt van de huidige situatie, de gewenste situatie en
-          ontwerpvraag. De belangrijkste inzichten uit dit onderzoek zijn
-          samengevat in onze statement cards.
+          het onderzoek naar jongeren groeide onze interesse om meer preventief
+          te werken met specifiek kinderen. Op basis van verschillende
+          onderzoeken hebben we een nieuwe formulering gemaakt van de huidige
+          situatie, de gewenste situatie en ontwerpvraag. De belangrijkste
+          inzichten uit dit onderzoek zijn samengevat in onze statement cards.
         </p>
 
         {/* Timeline */}
         <div className="relative">
           {/* Vertical dashed line */}
-        <div className=" lg-6 md:pl-0 absolute left-1/2 top-20 -bottom-20 w-px border-l-2 border-dashed border-primary-foreground/40 -translate-x-1/2" />
+          <div className=" lg-6 md:pl-0 absolute left-1/2 top-20 -bottom-20 w-px border-l-2 border-dashed border-primary-foreground/40 -translate-x-1/2" />
           {timelineItems.map((item, index) => (
             <div key={index} className="relative mb-24 last:mb-16">
               {/* Timeline icon */}
@@ -342,9 +339,9 @@ const SprintOneSection = () => {
                     {item.title}
                   </h3>
                   <div className="bg-[#292122] text-white border border-primary-foreground/20 rounded-lg p-5">
-                  <p className="text-sm leading-relaxed text-primary-foreground/80 whitespace-pre-line">
-                    {item.text}
-                  </p>
+                    <p className="text-sm leading-relaxed text-primary-foreground/80 whitespace-pre-line">
+                      {item.text}
+                    </p>
                   </div>
                 </div>
 
@@ -430,9 +427,7 @@ const SprintOneSection = () => {
               >
                 {/* 🔝 BOVEN HELFT (Titel) */}
                 <div className="px-6 sm:px-8 lg:px-10 py-6 sm:py-8">
-                  <h4
-                    className="text-xl sm:text-2xl lg:text-3xl font-semibold text-white leading-tight max-w-[958px] py-12 px-8"
-                  >
+                  <h4 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-white leading-tight max-w-[958px] py-12 px-8">
                     {card.title}
                   </h4>
                 </div>

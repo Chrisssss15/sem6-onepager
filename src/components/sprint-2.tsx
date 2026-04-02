@@ -157,8 +157,8 @@ const SprintTwoSection = () => {
 
   const [activeTopicIndex, setActiveTopicIndex] = useState(0);
 
-    const [fadePersona, setFadePersona] = useState(false);
-    const [fadePrototype, setFadePrototype] = useState(false);
+  const [fadePersona, setFadePersona] = useState(false);
+  const [fadePrototype, setFadePrototype] = useState(false);
 
   const personaSlides = [
     UserPersona1,
@@ -167,21 +167,21 @@ const SprintTwoSection = () => {
     UserPersona4,
   ];
 
-const nextPersona = () => {
-  setFadePersona(true);
-  setTimeout(() => {
-    personaSlider.next();
-    setFadePersona(false);
-  }, 150);
-};
+  const nextPersona = () => {
+    setFadePersona(true);
+    setTimeout(() => {
+      personaSlider.next();
+      setFadePersona(false);
+    }, 150);
+  };
 
-const prevPersona = () => {
-  setFadePersona(true);
-  setTimeout(() => {
-    personaSlider.prev();
-    setFadePersona(false);
-  }, 150);
-};
+  const prevPersona = () => {
+    setFadePersona(true);
+    setTimeout(() => {
+      personaSlider.prev();
+      setFadePersona(false);
+    }, 150);
+  };
   const prototypeImages = [
     prototypeDisplay,
     prototype1,
@@ -192,20 +192,20 @@ const prevPersona = () => {
     prototype6,
   ];
   const nextPrototype = () => {
-  setFadePrototype(true);
-  setTimeout(() => {
-    prototypeSlider.next();
-    setFadePrototype(false);
-  }, 150);
-};
+    setFadePrototype(true);
+    setTimeout(() => {
+      prototypeSlider.next();
+      setFadePrototype(false);
+    }, 150);
+  };
 
-const prevPrototype = () => {
-  setFadePrototype(true);
-  setTimeout(() => {
-    prototypeSlider.prev();
-    setFadePrototype(false);
-  }, 150);
-};
+  const prevPrototype = () => {
+    setFadePrototype(true);
+    setTimeout(() => {
+      prototypeSlider.prev();
+      setFadePrototype(false);
+    }, 150);
+  };
 
   // 🔥 sliders
   const personaSlider = useSlider(personaSlides.length);
@@ -328,15 +328,15 @@ const prevPrototype = () => {
             alt={`Persona ${personaSlider.index + 1}`}
             className="w-full max-w-[500px] mx-auto rounded-lg"
           /> */}
-        <img
-        src={personaSlides[personaSlider.index]}
-        onClick={() => setActiveImage(personaSlides[personaSlider.index])}
-        className={`
+          <img
+            src={personaSlides[personaSlider.index]}
+            onClick={() => setActiveImage(personaSlides[personaSlider.index])}
+            className={`
             w-full max-w-[500px] mx-auto rounded-lg
             transition-opacity duration-200
             ${fadePersona ? "opacity-0" : "opacity-100"}
         `}
-        />
+          />
         </div>
 
         {/* arrows */}
@@ -349,7 +349,7 @@ const prevPrototype = () => {
           </button>
 
           <button
-            onClick={nextPersona}            
+            onClick={nextPersona}
             className="w-12 h-12 rounded-full border flex items-center justify-center hover:bg-black hover:text-white transition"
           >
             →
@@ -427,9 +427,11 @@ const prevPrototype = () => {
           <div className="w-full md:w-1/2 flex flex-col items-center">
             {/* image */}
             <img
-            src={prototypeImages[prototypeSlider.index]}
-            onClick={() => setActiveImage(prototypeImages[prototypeSlider.index])}
-            className={`
+              src={prototypeImages[prototypeSlider.index]}
+              onClick={() =>
+                setActiveImage(prototypeImages[prototypeSlider.index])
+              }
+              className={`
                 h-[50vh] rounded-[2rem]
                 transition-opacity duration-200
                 ${fadePrototype ? "opacity-0" : "opacity-100"}
