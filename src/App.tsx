@@ -13,11 +13,11 @@ function App() {
     <div className="font-sans bg-white">
       
       {/* Navbar altijd bovenaan */}
-      <div className="fixed top-0 left-0 w-full z-50">
+      <div className="fixed top-0 left-0 w-full z-100">
         <Navigation />
       </div>
 
-      <main className="pt-[80px]">
+      <main className="pt-[140px]">
         <section className="min-h-screen">
           <HeroSection />
         </section>
