@@ -7,7 +7,7 @@ const HeroSection = () => {
     "Wij zijn een multidisciplinair team dat onderzoekt hoe jongeren bewuster online kunnen zijn en een gezondere online-offline balans kunnen vinden.";
   const boldPart = "Sprint 3 is live";
   // const restPart = ", ontdek onze eerste inzichten! 🚀";
-  const restPart = ", ontdek onze eerste ontwerpkeuzes! 🚀";
+  const restPart = ", ontdek hoe we van inzichten naar een werkend concept zijn gegaan 🚀";
   const text2 = boldPart + restPart;
 
   const [displayedText1, setDisplayedText1] = useState("");
