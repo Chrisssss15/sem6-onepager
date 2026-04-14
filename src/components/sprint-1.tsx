@@ -295,13 +295,13 @@ const SprintOneSection = () => {
   return (
     <section
       id="sprint-1"
-      className="py-20 bg-foreground text-primary-foreground"
+      className="py-15 text-primary-foreground"
     >
       <div className="container mx-auto px-6 lg:px-16 max-w-4xl">
         {/* Title */}
-        <h2 className="text-5xl md:text-6xl font-serif italic text-center mb-8">
+        {/* <h2 className="text-5xl md:text-6xl font-serif italic text-center mb-8">
           Sprint 1
-        </h2>
+        </h2> */}
 
         {/* Intro */}
         <p className="text-center text-primary-foreground/80 max-w-2xl mx-auto mb-20 leading-relaxed">

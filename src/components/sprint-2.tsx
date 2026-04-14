@@ -214,11 +214,13 @@ const SprintTwoSection = () => {
   const [activeImage, setActiveImage] = useState<string | null>(null);
 
   return (
-    <section id="sprint-2" className="py-20 px-4 bg-[#FFFDEB]">
+    // <section id="sprint-2" className="py-20 px-4 bg-[#FFFDEB]">
+        <section id="sprint-2" className="py-15 px-4">
+
       <div className="max-w-5xl mx-auto ">
-        <h2 className="text-5xl md:text-7xl font-serif italic text-center mb-8">
+        {/* <h2 className="text-5xl md:text-7xl font-serif italic text-center mb-8">
           Sprint 2
-        </h2>
+        </h2> */}
 
         <p className="text-center text-lg md:text-xl max-w-3xl mx-auto mb-20 font-light leading-relaxed">
           In sprint 2 vertaalden we onze onderzoeksinzichten naar actie. Door
@@ -311,7 +313,7 @@ const SprintTwoSection = () => {
           Persona's
         </h3>
 
-        <p className=" max-w-[800px] mx-auto text-center font-sans text-[15px] md:text-[17px] lg:text-[18px] leading-[26px] md:leading-[28px] lg:leading-[30px] text-black/70 mb-6">
+        <p className=" max-w-[800px] mx-auto text-center font-sans text-[15px] md:text-[17px] lg:text-[18px] leading-[26px] md:leading-[28px] lg:leading-[30px]  mb-6">
           We hebben zowel een user persona als meerdere non-human persona’s
           ontwikkeld. De user persona geeft inzicht in het gedrag, de behoeften
           en uitdagingen van de doelgroep. De non-human persona’s (zoals de

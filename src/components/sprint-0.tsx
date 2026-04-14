@@ -46,13 +46,15 @@ const SprintZeroSection = () => {
   return (
     <section
       id="sprint-0"
-      className="min-h-screen bg-[#292122] flex items-center py-20"
+      // className="min-h-screen bg-[#292122] flex items-center py-20"
+      className="min-h-screen flex items-center py-15"
+
     >
       <div className="container mx-auto px-6 lg:px-16 max-w-2xl">
         {/* TITEL VAN DE PAGINA */}
-        <h2 className="text-5xl md:text-6xl font-serif italic text-center text-white mb-12">
+        {/* <h2 className="text-5xl md:text-6xl font-serif italic text-center text-white mb-12">
           Sprint 0
-        </h2>
+        </h2> */}
 
         {/* HET UITKLAPMENU (De lijst met items) */}
         <div className="flex flex-col gap-4">
