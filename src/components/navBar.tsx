@@ -15,7 +15,7 @@ export const Navigation = () => {
     { id: 0, label: "Sprint 0" },
     { id: 1, label: "Sprint 1" },
     { id: 2, label: "Sprint 2" },
-    // { id: 3, label: "Sprint 3" },
+    { id: 3, label: "Sprint 3" },
     // { id: 4, label: "Sprint 4" },
     // { id: 5, label: "Sprint 5" },
   ];
