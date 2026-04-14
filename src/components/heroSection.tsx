@@ -5,7 +5,7 @@ const HeroSection = () => {
   // DE TEKSTEN DIE GETYPT MOETEN WORDEN
   const text1 =
     "Wij zijn een multidisciplinair team dat onderzoekt hoe jongeren bewuster online kunnen zijn en een gezondere online-offline balans kunnen vinden.";
-  const boldPart = "Sprint 2 is live";
+  const boldPart = "Sprint 3 is live";
   // const restPart = ", ontdek onze eerste inzichten! 🚀";
   const restPart = ", ontdek onze eerste ontwerpkeuzes! 🚀";
   const text2 = boldPart + restPart;
