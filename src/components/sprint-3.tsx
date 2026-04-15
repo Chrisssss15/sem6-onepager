@@ -103,10 +103,10 @@ const SprintThreeSection = () => {
         </blockquote>
       </div>
 
-      {/* ================= AANNAMENS ================= */}
+      {/* ================= AANNAMES ================= */}
       <div className="mt-28 md:mt-32">
         <h3 className="text-4xl md:text-5xl font-serif italic text-center mb-12">
-          Aannamens
+          Aannames
         </h3>
 
         <p className="text-center text-base md:text-lg max-w-3xl mx-auto mb-10 font-light leading-relaxed">
@@ -216,6 +216,178 @@ const SprintThreeSection = () => {
             <img src={miniLogo} alt="" className="w-7 h-7 " />
           </div>
         </div>
+
+{/* ================= TESTEN MET DOELGROEP ================= */}
+<div className="mt-28 md:mt-36 max-w-5xl mx-auto px-4">
+  <h3 className="text-3xl md:text-[40px] font-serif italic text-center mb-12 md:mb-14 text-[#292122]">
+    Testen met de doelgroep
+  </h3>
+
+  {/* ===== MOBILE / TABLET VIEW ===== */}
+  <div className="md:hidden space-y-6">
+    {[
+      {
+        title: "Begrip",
+        items: [
+          "Spel deels direct duidelijk",
+          "Uitleg nodig bij start",
+          "Flow soms onduidelijk",
+        ],
+      },
+      {
+        title: "Gesprek",
+        items: [
+          "Veel overleg",
+          "Actief nadenken",
+          "Discussie over oplossingen",
+        ],
+      },
+      {
+        title: "Hints",
+        items: [
+          "Actief gebruikt",
+          "Verbanden gelegd",
+          "Soms lastig te begrijpen",
+        ],
+      },
+      {
+        title: "Beleving",
+        items: [
+          "Leuk en spannend",
+          "Mystery werkt goed",
+          "Motiverend",
+        ],
+      },
+      {
+        title: "Problemen",
+        items: [
+          "Start onduidelijk",
+          "Wanneer oplossen?",
+          "Soms weinig richting",
+        ],
+      },
+      {
+        title: "Verbeterpunten",
+        items: [
+          "Betere uitleg",
+          "Hints opbouwen",
+          "Oplosmoment bepalen",
+        ],
+      },
+    ].map((section) => (
+      <div
+        key={section.title}
+        className="bg-[#292122]/5 rounded-xl p-5"
+      >
+        <h4 className="text-[20px] font-serif italic mb-3 text-[#292122]">
+          {section.title}
+        </h4>
+        <ul className="space-y-1 text-[15px] leading-[1.6] text-[#292122]/80">
+          {section.items.map((item) => (
+            <li key={item}>• {item}</li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+
+  {/* ===== DESKTOP VIEW ===== */}
+  <div className="hidden md:block">
+    {/* TOP GRID */}
+    <div className="grid md:grid-cols-3 relative">
+      {/* vertical dividers */}
+      <div className="absolute left-1/3 top-0 bottom-0 w-px bg-[#292122]/10" />
+      <div className="absolute left-2/3 top-0 bottom-0 w-px bg-[#292122]/10" />
+
+      {[
+        {
+          title: "Begrip",
+          items: [
+            "Spel deels direct duidelijk",
+            "Uitleg nodig bij start",
+            "Flow soms onduidelijk",
+          ],
+        },
+        {
+          title: "Gesprek",
+          items: [
+            "Veel overleg",
+            "Actief nadenken",
+            "Discussie over oplossingen",
+          ],
+        },
+        {
+          title: "Hints",
+          items: [
+            "Actief gebruikt",
+            "Verbanden gelegd",
+            "Soms lastig te begrijpen",
+          ],
+        },
+      ].map((section) => (
+        <div key={section.title} className="px-8">
+          <h4 className="text-[22px] font-serif italic mb-3 text-[#292122]">
+            {section.title}
+          </h4>
+          <ul className="space-y-1 text-[15px] leading-[1.6] text-[#292122]/80">
+            {section.items.map((item) => (
+              <li key={item}>• {item}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    {/* divider */}
+    <div className="my-12 h-px bg-[#292122]/10 w-[90%] mx-auto" />
+
+    {/* BOTTOM GRID */}
+    <div className="grid md:grid-cols-3 relative">
+      {/* vertical dividers */}
+      <div className="absolute left-1/3 top-0 bottom-0 w-px bg-[#292122]/10" />
+      <div className="absolute left-2/3 top-0 bottom-0 w-px bg-[#292122]/10" />
+
+      {[
+        {
+          title: "Beleving",
+          items: [
+            "Leuk en spannend",
+            "Mystery werkt goed",
+            "Motiverend",
+          ],
+        },
+        {
+          title: "Problemen",
+          items: [
+            "Start onduidelijk",
+            "Wanneer oplossen?",
+            "Soms weinig richting",
+          ],
+        },
+        {
+          title: "Verbeterpunten",
+          items: [
+            "Betere uitleg",
+            "Hints opbouwen",
+            "Oplosmoment bepalen",
+          ],
+        },
+      ].map((section) => (
+        <div key={section.title} className="px-8">
+          <h4 className="text-[22px] font-serif italic mb-3 text-[#292122]">
+            {section.title}
+          </h4>
+          <ul className="space-y-1 text-[15px] leading-[1.6] text-[#292122]/80">
+            {section.items.map((item) => (
+              <li key={item}>• {item}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
     </section>
   );
 };
