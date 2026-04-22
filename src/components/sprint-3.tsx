@@ -162,14 +162,14 @@ const SprintThreeSection = () => {
           {/* Vertical dashed line */}
           <div className=" lg-6 md:pl-0 absolute left-1/2 top-20 -bottom-20 w-px border-l-2 border-dashed border-primary-foreground/40 -translate-x-1/2" />
           {timelineItems.map((item, index) => (
-            <div key={index} className="relative mb-24 last:mb-16">
+              <div key={index} className="relative mb-8 last:mb-6">              
               {/* Timeline icon */}
               <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-14 z-10 w-10 h-10 rounded-full bg-foreground flex items-center justify-center">
                 <img src={miniLogo} alt="" className="w-10 h-7 " />
               </div>
 
               <div
-                className={`flex flex-col md:flex-row items-center gap-8 pt-15 ${
+                className={`flex flex-col md:flex-row items-center gap-4 pt-10 ${
                   item.imagePosition === "left" ? "md:flex-row-reverse" : ""
                 }`}
               >
@@ -199,13 +199,13 @@ const SprintThreeSection = () => {
                 </div> */}
                 {/* img card */}
                 <div className="flex-1">
-                  <div className="rounded-lg overflow-hidden aspect-[4/3] pt-18">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-3xl h-auto object-cover "
-                    />
-                  </div>
+<div className="rounded-lg overflow-hidden h-[300px] md:h-[400px] lg:h-[500px]">
+<img
+  src={item.image}
+  alt={item.title}
+  className="w-full h-full object-contain"
+/>
+</div>
                 </div>
               </div>
             </div>
