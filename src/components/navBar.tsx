@@ -194,6 +194,7 @@ export const Navigation = ({ onSprintClick }: NavigationProps) => {
     { id: 1, label: "Sprint 1" },
     { id: 2, label: "Sprint 2" },
     { id: 3, label: "Sprint 3" },
+    { id: 4, label: "Sprint 4" },
   ];
 
   // 🔥 voorkom scroll op body als menu open is

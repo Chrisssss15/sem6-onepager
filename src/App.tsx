@@ -252,6 +252,7 @@ import Sprint0Section from "./components/sprint-0";
 import Sprint1Section from "./components/sprint-1";
 import Sprint2Section from "./components/sprint-2";
 import Sprint3Section from "./components/sprint-3";
+import Sprint4Section from "./components/sprint-4";
 import Footer from "./components/footer";
 import Accordion from "./components/accordion";
 
@@ -334,6 +335,15 @@ function App() {
             onToggle={() => toggleItem(3)}
           >
             <Sprint3Section />
+          </Accordion>
+        </div>
+        <div id="sprint-4">
+          <Accordion
+            title="Sprint 4"
+            isOpen={openItems.includes(4)}
+            onToggle={() => toggleItem(4)}
+          >
+            <Sprint4Section />
           </Accordion>
         </div>
 
