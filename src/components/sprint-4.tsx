@@ -50,7 +50,7 @@ const timelineItems: TimelineItem[] = [
     image: reflectionPhone,
     imageAlt: "Mobiel reflectiescherm van Case Crackers",
     imagePosition: "right",
-    imageClassName: "max-h-[300px]",
+    imageClassName: "max-h-[260px] md:max-h-[300px]",
   },
 ];
 
@@ -121,8 +121,13 @@ const SprintFourSection = () => {
       <div className="relative max-w-5xl mx-auto mt-24 md:mt-32 px-0 md:px-4">
         <div className="hidden md:block absolute left-1/2 top-0 bottom-8 w-px border-l-2 border-dashed border-[#292122]/35 -translate-x-1/2" />
 
-        {timelineItems.map((item) => (
-          <div key={item.title} className="relative mb-16 md:mb-20 last:mb-0">
+        {timelineItems.map((item, index) => (
+          <div
+            key={item.title}
+            className={`relative mb-20 md:mb-20 ${
+              index === timelineItems.length - 1 ? "mb-28 md:mb-24" : ""
+            }`}
+          >
             <div className="hidden md:flex absolute left-1/2 top-6 -translate-x-1/2 z-10 w-11 h-11 rounded-full bg-white items-center justify-center">
               <img src={miniLogo} alt="" className="w-10 h-10" />
             </div>
@@ -135,22 +140,22 @@ const SprintFourSection = () => {
               }`}
             >
               <div>
-                <h3 className="text-3xl md:text-4xl font-serif italic mb-5">
+                <h3 className="text-4xl md:text-4xl font-serif italic mb-6">
                   {item.title}
                 </h3>
 
-                <div className="bg-[#292122] text-white rounded-lg shadow-md p-5 md:p-6">
-                  <p className="text-sm md:text-[15px] leading-relaxed text-white/85">
+                <div className="bg-[#292122] text-white rounded-xl shadow-md p-6 md:p-6">
+                  <p className="text-lg md:text-[15px] leading-relaxed text-white/85">
                     {item.text}
                   </p>
                 </div>
               </div>
 
-              <div className="flex justify-center">
+              <div className="flex justify-center mt-6 md:mt-0">
                 <img
                   src={item.image}
                   alt={item.imageAlt}
-                  className={`w-full max-w-[340px] object-contain drop-shadow-sm ${
+                  className={`w-full max-w-[260px] md:max-w-[340px] object-contain drop-shadow-sm ${
                     item.imageClassName ?? ""
                   }`}
                 />
@@ -160,18 +165,19 @@ const SprintFourSection = () => {
         ))}
       </div>
 
-        <div className="max-w-[720px] mx-auto mt-20 md:mt-28 mb-16 md:mb-20 text-center px-4">
-        <h3 className="font-serif italic font-medium text-[#292122] text-3xl md:text-[42px] leading-tight mb-6">
-            App development & testing
+      <div className="max-w-[660px] mx-auto mt-10 md:mt-24 mb-20 md:mb-24 text-center px-4">
+        <h3 className="font-serif italic font-medium text-[#292122] text-[34px] md:text-[40px] leading-none mb-5">
+          App development & testing
         </h3>
 
-        <p className="font-normal text-black text-sm md:text-[17px] leading-[1.75]">
-            De app bevindt zich momenteel in development. In sprint 5 willen we de
-            digitale component verder testen binnen de praktijk om te onderzoeken hoe
-            de app de spelervaring ondersteunt en hoe kinderen en volwassenen de
-            combinatie van het fysieke bordspel en de digitale elementen ervaren.
+        <p className="font-normal text-black text-[13px] md:text-[15px] leading-[1.8]">
+          De app bevindt zich momenteel in development. In sprint 5 willen we de
+          digitale component verder testen binnen de praktijk om te onderzoeken
+          hoe de app de spelervaring ondersteunt en hoe kinderen en volwassenen
+          de combinatie van het fysieke bordspel en de digitale elementen
+          ervaren.
         </p>
-        </div>
+      </div>
     </section>
   );
 };

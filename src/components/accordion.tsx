@@ -56,9 +56,7 @@ export default function Accordion({
       {/* CONTENT */}
       <div
         className={`transition-all duration-500 ease-in-out overflow-hidden ${
-          isOpen
-            ? "max-h-[5000px] opacity-100"
-            : "max-h-0 opacity-0"
+          isOpen ? "max-h-[12000px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="px-4 pb-20">{children}</div>

@@ -5,9 +5,9 @@ const HeroSection = () => {
   // DE TEKSTEN DIE GETYPT MOETEN WORDEN
   const text1 =
     "Wij zijn een multidisciplinair team dat onderzoekt hoe kinderen bewuste en veilige keuzes leren maken online.";
-  const boldPart = "Sprint 3 is live";
+  const boldPart = "Sprint 4 is live";
   // const restPart = ", ontdek onze eerste inzichten! 🚀";
-  const restPart = ", ontdek hoe we van inzichten naar een werkend concept zijn gegaan 🚀";
+  const restPart = ", ontdek hoe we Case Crackers hebben uitgewerkt tot een spannend bordspel met digitale ondersteuning 🔎";
   const text2 = boldPart + restPart;
 
   const [displayedText1, setDisplayedText1] = useState("");
