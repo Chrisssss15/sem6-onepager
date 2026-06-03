@@ -14,35 +14,39 @@ import chrisImgPopup from "../assets/chris-popup.png";
 import fouziaImgPopup from "../assets/fouzia-popup.png";
 import jamieImgPopup from "../assets/jamie-popup.png";
 import shayenImgPopup from "../assets/shayen-popup.png";
+import profileIcon from "../assets/Profile-icon.png";
+import profileIconPopup from "../assets/Profile-icon-full.png";
+
+
 
 // --- DATA VAN TEAMLEDEN IMPORTEREN ---
 const teamMembers = [
   {
     name: "Shayen Manbodh",
-    image: shayenImg, // AFBEELDING AAN DE VOORKANT
-    popupImage: shayenImgPopup, // AFBEELDING IN DE POPUP
+    image: profileIcon, // AFBEELDING AAN DE VOORKANT
+    popupImage: profileIconPopup, // AFBEELDING IN DE POPUP
     bio: "Hoi, ik ben Shayen en ik studeer ADS&AI. Binnen het team houd ik me vooral bezig met data in alle vormen en mate. Buiten school om sport ik veel en hou ik ervan om mijn favoriete team FC Barcelona te supporten.", // INFORMATIE VAN DE TEAMLID IN DE POPUP
     linkedin: "https://www.linkedin.com/in/shayen-manbodh-364733291/", // URL VAN LINKEDIN
   },
   {
     name: "Alyssa Muyden",
-    image: alyssaImg,
-    popupImage: alyssaImgPopup,
+    image: profileIcon,
+    popupImage: profileIconPopup,
     bio: "Hey! Ik ben Alyssa, student CMD. Ik duik graag in de wereld van de gebruiker en geloof dat elk ontwerp menselijk en betekenisvol moet zijn. Daarom ben ik altijd nieuwsgierig naar het ‘waarom’ achter gedrag. Buiten mijn studie ben ik veel bezig met persoonlijke ontwikkeling, muziek en sporten.",
     linkedin:
       "https://www.linkedin.com/in/alyssa-muyden?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
   },
   {
     name: "Chris Tang",
-    image: chrisImg,
-    popupImage: chrisImgPopup,
+    image: profileIcon,
+    popupImage: profileIconPopup,
     bio: "Hoi, Ik ben Chris, student Creative Media and Game Technology. Binnen mijn team ben ik verantwoordelijk voor het ontwikkelen en coderen van de applicatie, waarbij ik ontwerp vertaal naar werkende digitale oplossingen. In mijn vrije tijd sport ik graag, zoals badminton en fitness, en verdiep ik me in de nieuwste modetrends.",
     linkedin: "https://www.linkedin.com/in/chris-tang-developer/",
   },
   {
     name: "Bart Meeuwenoord",
-    image: bartImg,
-    popupImage: bartImgPopup,
+    image: profileIcon,
+    popupImage: profileIconPopup,
     bio: `Hi! Ik ben Bart, CMD-student (Communicatie & Multimedia Design) en binnen ons team werk ik als designer en onderzoeker.
         Ik vind het leuk om ideeën te vertalen naar ontwerpen die niet alleen mooi zijn, maar ook goed werken voor de gebruiker.
         In mijn vrije tijd sport ik graag en ben ik vaak bezig met ontwerpen, omdat ik het leuk vind om creatief bezig te zijn en nieuwe ideeën uit te proberen.`,
@@ -50,15 +54,15 @@ const teamMembers = [
   },
   {
     name: "Jamie Verloop",
-    image: jamieImg,
-    popupImage: jamieImgPopup,
+    image: profileIcon,
+    popupImage: profileIconPopup,
     bio: "Hoi, ik ben Jamie. Ik studeer ADS&AI en werk met de data binnen dit team. Ik zorg ervoor dat de kwaliteit van data op orde is en de inzichten duidelijk zijn. In mijn vrije tijd ben ik vooral bezig met boulderen, klimmen en motorrijden. ",
     linkedin: "https://nl.linkedin.com/in/jamie-verloop-965636305",
   },
   {
     name: "Fouzia Tahiri",
-    image: fouziaImg,
-    popupImage: fouziaImgPopup,
+    image: profileIcon,
+    popupImage: profileIconPopup,
     bio: "Hi! Ik ben Fouzia, CMD-student en de UX designer binnen ons team. Ik vertaal inzichten uit onderzoek naar doordachte en gebruiksvriendelijke oplossingen die écht aansluiten bij de gebruiker. In mijn vrije tijd maak ik graag handgemaakte kaarten, die creativiteit en dat oog voor detail neem ik in elk ontwerp met me mee.",
     linkedin:
       "https://www.linkedin.com/in/fouzia-t-122188231?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
@@ -151,7 +155,7 @@ const AboutSection = () => {
               </div>
 
               {/* LinkedIn knop */}
-              <div className="flex justify-end mt-6">
+              {/* <div className="flex justify-end mt-6">
                 <a
                   href={teamMembers[selectedMember].linkedin}
                   target="_blank"
@@ -166,7 +170,7 @@ const AboutSection = () => {
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                   </svg>
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
