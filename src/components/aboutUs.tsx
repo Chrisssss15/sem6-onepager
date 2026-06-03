@@ -2,18 +2,18 @@ import { useState } from "react";
 import { X } from "lucide-react";
 
 // --- AFBEELDING IMPORT ---
-import alyssaImg from "../assets/alyssa.png";
-import bartImg from "../assets/bart.png";
-import chrisImg from "../assets/chris.png";
-import fouziaImg from "../assets/fouzia.png";
-import jamieImg from "../assets/jamie.png";
-import shayenImg from "../assets/shayen.png";
-import alyssaImgPopup from "../assets/alyssa-popup.png";
-import bartImgPopup from "../assets/bart-popup.png";
-import chrisImgPopup from "../assets/chris-popup.png";
-import fouziaImgPopup from "../assets/fouzia-popup.png";
-import jamieImgPopup from "../assets/jamie-popup.png";
-import shayenImgPopup from "../assets/shayen-popup.png";
+// import alyssaImg from "../assets/alyssa.png";
+// import bartImg from "../assets/bart.png";
+// import chrisImg from "../assets/chris.png";
+// import fouziaImg from "../assets/fouzia.png";
+// import jamieImg from "../assets/jamie.png";
+// import shayenImg from "../assets/shayen.png";
+// import alyssaImgPopup from "../assets/alyssa-popup.png";
+// import bartImgPopup from "../assets/bart-popup.png";
+// import chrisImgPopup from "../assets/chris-popup.png";
+// import fouziaImgPopup from "../assets/fouzia-popup.png";
+// import jamieImgPopup from "../assets/jamie-popup.png";
+// import shayenImgPopup from "../assets/shayen-popup.png";
 import profileIcon from "../assets/Profile-icon.png";
 import profileIconPopup from "../assets/Profile-icon-full.png";
 
